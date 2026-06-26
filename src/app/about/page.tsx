@@ -1,0 +1,318 @@
+"use client";
+
+import { useState } from "react";
+import { Globe2, ShieldCheck, Wrench } from "lucide-react";
+import { SectionLabel } from "@/components/page-primitives";
+import { SiteFooter, SiteHeader } from "@/components/site-shell";
+
+const heroImage =
+  "/images/workshop/workshop-02.jpg";
+
+const overviewImage =
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuCVGlvT8k64Us6onRKlBJtKlUPU81gSy40CKBb63f7WI84PtFLSjg1wrk5U14hyXMqbuIAqF8wR63jzdTXQJKxSuYkT_ZYybXUt5KRK5iRl5claE5s6AE-DTM6lo9xN5qE3aWNbkg1hrkBNkyB35aiJ37urncxDdCiIhBfAIa3oS2TSI-YbE-0s0Fe4kZscQuTn-ctUOPb3Vi-cIESnHf_sfPhrdIttU5VTCRjroPw7oWlnmm3VK_92tXU_W9GflyL-zjMpJbREZyc";
+
+const capabilityImages = [
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuDqx-fBPUo11OQrLdEKjmcZ9Kn-xQsGs-qbwK_CnvL0ikIAo7XDqkGr6Iog4C3Zygh0B6-FnmMbhcucbXVZ-RZ4V61DioS6dmoGSKuDDL_GwN4t0iJRBFN00aplc2_DQXglwZZ-Wsdfa71fwhyK2BOjFWh1FQxYFQcv9zcpK_K48V7rX7KttUvNaB5nRHbj4hpu16Jers-Dkat4tjMDTvON26F-Chd8BK0dDL38l76TEEj9Z5gqerMu-Z_4hPt_jluVY6mtLHgnj3E",
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuBa7GJwmV-igoCHPeTdxISDonpQ80-0wIl-609VOjq4BZEribCZOH2D3iTf5QYr5LHjxQgY0jMsXFT4P99nT74zhH5-W0-JzLRzVyz2Zt843wwmefCMlsRbTrxMF1Ojnms-TfGc_RExeiVQUBlZwIYXS95X9Ql1NmIL7TljZOnw4JFCitbGaX83pcyis40aFU7lzRSSgqSJjWxyqsbbNrDxC9CXm26arIjVMmtdUgahRKCHilYVuoPooL7eITRSRg_KbYjKEmyIgWs",
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuCTpXchbzwF2-9cQKIFfqrZUOJ1TajSxewPezB8X_l8idL9PL2WdN05ygbOKNya2aYWHC-UW3hMsSOS097oWPsEhZaOQ8lfRy4dfurRPgp-5LRITkx6Py-zyXWgz4oyXSL-BiG7aVdhvdg21xHqSLbDqjIoGgFlgy6zScxHohaMaWBouvZYVwaUbKtL6jVw2RoiHbv5PrZz0AE27__wvVMNJY4_DANSSBHkilRF9NWVBadBhv0rztM03FPD6xyLZ8a-Smh26Q58AWc",
+];
+
+const historyItems = [
+  {
+    year: "2014",
+    title: "Zhangjiagang Sokos Machinery Established",
+    text: "With the support of foreign clients, Zhangjiagang Sokos Machinery Co., Ltd. was established.",
+    image: overviewImage,
+  },
+  {
+    year: "2015",
+    title: "Enterprise Honors and Domestic Partnerships",
+    text: "Obtained multiple domestic enterprise honor certificates; collaborated with listed companies and top beverage companies in China.",
+    image: capabilityImages[0],
+  },
+  {
+    year: "2016",
+    title: "Overseas Market Expansion",
+    text: "Rapid business development, overseas market exploration, and international certificates including CE, ISO, SGS, and Gold Supplier.",
+    image: heroImage,
+  },
+  {
+    year: "2017",
+    title: "Mechanical Design Team Expanded",
+    text: "Hired 8 mechanical design engineers to study new technical structures.",
+    image: capabilityImages[2],
+  },
+  {
+    year: "2019",
+    title: "Products Exported to 42 Countries",
+    text: "Exported products to 42 countries.",
+    image: capabilityImages[1],
+  },
+  {
+    year: "2021",
+    title: "Technical Patents Reached 11",
+    text: "The company reached 11 technical patents.",
+    image: overviewImage,
+  },
+  {
+    year: "2023",
+    title: "Exports Reached 60 Countries",
+    text: "Overseas trade developed rapidly, with exports to 60 countries.",
+    image: heroImage,
+  },
+];
+
+export default function AboutPage() {
+  const [activeHistoryIndex, setActiveHistoryIndex] = useState(0);
+  const activeHistory = historyItems[activeHistoryIndex];
+
+  return (
+    <main className="bg-[#f5f7fa] text-[#131314]">
+      <div className="mx-auto min-h-screen max-w-[2000px] bg-white shadow-sm">
+        <SiteHeader active="ABOUT" />
+
+        <section className="relative flex min-h-[720px] items-center overflow-hidden pt-24">
+          <div className="absolute inset-0">
+            <img alt="" className="size-full object-cover opacity-95" src={heroImage} />
+            <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/20 to-transparent" />
+          </div>
+          <div className="relative mx-auto w-full max-w-[1200px] px-5 md:px-16">
+            <div className="max-w-3xl">
+              <span className="mb-4 block font-mono text-xs uppercase tracking-[0.3em] text-primary">
+                Established 2004
+              </span>
+              <h1 className="mb-8 text-5xl font-bold uppercase leading-tight md:text-7xl">
+                Engineering <span className="text-primary">Excellence</span> Since 2004
+              </h1>
+              <p className="max-w-2xl border-l-4 border-primary py-2 pl-6 text-lg leading-8 text-slate-600">
+                Sokos Machinery is dedicated to the research, development, and manufacture of
+                world-class liquid filling and packaging solutions.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-[#f5f7fa] py-24 lg:py-[120px]">
+          <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-16 px-5 md:px-16 lg:grid-cols-2">
+            <div className="relative">
+              <div className="absolute -left-4 -top-4 size-24 border-l-2 border-t-2 border-primary" />
+              <img
+                alt="Filling line close-up"
+                className="aspect-[4/3] w-full border border-[#e2e8f0] object-cover shadow-xl"
+                src={overviewImage}
+              />
+              <div className="absolute -bottom-4 -right-4 size-24 border-b-2 border-r-2 border-primary" />
+            </div>
+            <div>
+              <SectionLabel>Company Overview</SectionLabel>
+              <h2 className="mb-6 text-4xl font-semibold uppercase">
+                Global Leader in Filling & Packaging
+              </h2>
+              <div className="flex flex-col gap-6 leading-8 text-slate-600">
+                <p>
+                  Sokos provides turnkey solutions across the complete liquid production
+                  lifecycle, from water treatment and blow molding to high-speed filling and
+                  final palletizing.
+                </p>
+                <p>
+                  We engineer competitive advantages for clients by maximizing throughput while
+                  reducing operational overhead and maintenance complexity.
+                </p>
+              </div>
+              <div className="mt-12 grid grid-cols-2 gap-8 border-t border-[#e2e8f0] pt-10">
+                <div>
+                  <h3 className="mb-2 font-mono text-xl text-primary">Mission</h3>
+                  <p className="text-sm text-slate-600">
+                    Empower beverage brands with precision-engineered automation.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="mb-2 font-mono text-xl text-primary">Vision</h3>
+                  <p className="text-sm text-slate-600">
+                    Standardize industrial excellence through R&D and global service.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white py-24 lg:py-[120px]">
+          <div className="mx-auto max-w-[1200px] px-5 md:px-16">
+            <div className="mb-14 grid grid-cols-1 gap-10 lg:grid-cols-[1fr_0.95fr] lg:items-start">
+              <div>
+                <p className="mb-5 text-sm font-semibold">Performance</p>
+                <h2 className="max-w-xl text-4xl font-bold leading-tight md:text-5xl">
+                  Numbers that speak for themselves
+                </h2>
+              </div>
+              <div>
+                <p className="max-w-xl text-sm leading-6 text-[#131314]">
+                  Sokos Machinery has grown steadily with manufacturing scale, global service,
+                  and long-term customer partnerships across beverage production markets.
+                </p>
+                <div className="mt-7 flex items-center gap-5">
+                  <a
+                    className="inline-flex h-11 items-center border border-[#131314] px-6 text-xs font-medium transition-colors hover:bg-[#131314] hover:text-white"
+                    href="/about"
+                  >
+                    Learn
+                  </a>
+                  <a
+                    className="inline-flex h-11 items-center gap-2 text-xs font-medium transition-colors hover:text-primary"
+                    href="/contact"
+                  >
+                    More
+                    <span aria-hidden="true">›</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 gap-7 md:grid-cols-2 xl:grid-cols-5">
+              {[
+                ["Years operating", "20+", "Production experience in filling and packaging systems"],
+                ["Factory scale", "30,000", "Square meters of modern manufacturing space"],
+                ["Team members", "120+", "Employees across engineering, production, and service"],
+                ["Countries served", "80+", "Export markets with active customer installations"],
+                ["Clients worldwide", "5,000+", "Customers supported by Sokos machinery solutions"],
+              ].map(([label, value, description]) => (
+                <article className="border-2 border-[#131314] bg-white p-7" key={label}>
+                  <h3 className="min-h-10 text-base font-bold">{label}</h3>
+                  <div className="mt-12 border-b border-[#9ca3af] pb-4 text-right text-5xl font-bold leading-none md:text-6xl xl:text-5xl">
+                    {value}
+                  </div>
+                  <p className="mt-4 text-right text-xs leading-5 text-[#131314]">
+                    {description}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white py-24 lg:py-[120px]">
+          <div className="mx-auto max-w-[1200px] px-5 md:px-16">
+            <SectionLabel>Development History</SectionLabel>
+            <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-[1fr_0.95fr]">
+              <div>
+                <p className="mb-3 font-mono text-sm uppercase tracking-[0.2em] text-primary">
+                  {activeHistory.year}
+                </p>
+                <h2 className="mb-6 text-4xl font-semibold md:text-5xl">
+                  {activeHistory.title}
+                </h2>
+                <p className="max-w-2xl text-base leading-7 text-slate-600">
+                  {activeHistory.text}
+                </p>
+              </div>
+
+              <div className="aspect-[1.15/1] overflow-hidden bg-[#d9d9d9]">
+                <img
+                  alt={`${activeHistory.year} company milestone`}
+                  className="size-full object-cover grayscale transition-opacity duration-300"
+                  src={activeHistory.image}
+                />
+              </div>
+            </div>
+
+            <div className="mt-16 overflow-x-auto pb-2">
+              <div className="relative min-w-[760px]">
+                <div className="relative grid grid-cols-7">
+                  {historyItems.map((item, index) => (
+                    <button
+                      className="group flex flex-col items-center gap-3"
+                      key={item.year}
+                      onClick={() => setActiveHistoryIndex(index)}
+                      type="button"
+                    >
+                      <div className="flex w-full items-center">
+                        <div className="h-px flex-1 bg-[#d9d9d9]" />
+                        <div
+                          className={`relative z-10 size-4 rounded-full border-4 border-white transition-colors ${
+                            activeHistoryIndex === index ? "bg-primary" : "bg-[#131314]"
+                          }`}
+                        />
+                        <div className="h-px flex-1 bg-[#d9d9d9]" />
+                      </div>
+                      <span
+                        className={`text-lg font-bold transition-colors ${
+                          activeHistoryIndex === index ? "text-primary" : "text-[#131314]"
+                        }`}
+                      >
+                        {item.year}
+                      </span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-[#f5f7fa] py-24 lg:py-[120px]">
+          <div className="mx-auto max-w-[1200px] px-5 md:px-16">
+            <div className="mb-14 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+              <div>
+                <SectionLabel>Precision at Scale</SectionLabel>
+                <h2 className="text-4xl font-semibold uppercase">
+                  Advanced Manufacturing Ecosystem
+                </h2>
+              </div>
+              <p className="font-mono text-sm uppercase tracking-[0.16em] text-slate-500">
+                10,000 sqm facility / CNC integration
+              </p>
+            </div>
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+              {[
+                ["CNC Precision", "Every component is machined in-house using 5-axis CNC technology."],
+                ["Rigorous QC", "Each unit passes a 48-hour stress test before shipment authorization."],
+                ["Innovative R&D", "Smart automation and IoT integration for predictive maintenance."],
+              ].map(([title, description], index) => (
+                <article className="border border-[#e2e8f0] bg-white p-6" key={title}>
+                  <img
+                    alt={title}
+                    className="mb-6 h-48 w-full object-cover"
+                    src={capabilityImages[index]}
+                  />
+                  <h3 className="mb-3 text-2xl font-semibold">{title}</h3>
+                  <p className="text-sm leading-6 text-slate-600">{description}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white py-24 lg:py-[120px]">
+          <div className="mx-auto max-w-[1200px] px-5 md:px-16">
+            <div className="mb-14 text-center">
+              <h2 className="mb-4 text-4xl font-semibold uppercase">A Global Support Network</h2>
+              <p className="mx-auto max-w-2xl text-slate-600">
+                Wherever you are, our engineers provide remote diagnostics and on-site support
+                across six continents.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+              {[
+                [Globe2, "On-Site Commissioning"],
+                [Wrench, "Parts Lifecycle Management"],
+                [ShieldCheck, "Cloud Diagnostics"],
+              ].map(([Icon, title]) => (
+                <article className="border-l-2 border-primary bg-[#f5f7fa] p-8" key={title as string}>
+                  <Icon className="mb-5 text-primary" size={28} />
+                  <h3 className="mb-2 text-xl font-semibold">{title as string}</h3>
+                  <p className="text-sm leading-6 text-slate-600">
+                    Structured service programs keep your beverage production operating at
+                    peak efficiency.
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <SiteFooter />
+      </div>
+    </main>
+  );
+}
