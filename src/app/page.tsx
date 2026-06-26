@@ -80,13 +80,6 @@ const solutions = [
   },
 ];
 
-const factoryImages = [
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuBxcoDJ2ALPjj-tGJGkpiygoZAWLLHzrK4wXkz7ZU7bqaFUwylP13SdoY1KOQcDxSG-H1wP_G0BSLxZ8BtIyoRH0wEPXzSbfw8QZvSMzDs8K6hIyt8PkhYmetR-2PBY8_kC7o0o1KkZdR3M4KQ0SMDk83Uhvp62EIgWRhJsKRFh4f6bi7XptM7rhpOafDpLh54XK-1FgN0HSUIsIsaW4ovwZj-sa7mGNnx0C6eH69yVpTdL6h1m44dITHIgF0xkSK6ODqEmTv_O_BE",
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuCnK22BvuMqqprz2jH7th2wR8Eq6e5Q-Wj0zOaJGubCMWo-lEV_4NzRXtRpGXm4MZKHmhYSdR3Of0iaKmNPBb2OK4jfYnQ33V9c8oEO6bfVSHZSi0b18LV9yG2O8RSy2v1fITuk7_DwyFMm6yvLn0Px_dcx6yPZeMqjG_AAeBm3bf3ybyvaqvscbSc9jkRyI5Yh15P3zrftNICFdmLXvDn8P304WoegEA0oVTww0wYGx2IKa11b8tIUVsTPtJgvJ989XGm_ZOxebqU",
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuA1Ky06JojYp-AWySQLS0LvxpFvMopv2wgX-gji2TO2VnK92l26ciztahd5XZzjl_M2do6fFtX5BEbtyxNKjA5iAODgAh6sogPBqxtM7TWHCUQV2X1m-RdVScueMU5keV-2LU36qRW6xzfuMylEdLRSyCBTsTMT93lcsRpp5KmxO0W54X29MEWm5UVCSAOpZpz5ywkhPUl7kFnqQAYM6Jxzn4GarI6YYQisVoU6cGtMUyddUY42EvzNO1P8ZNJDvO9chFLBf_7mzF4",
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuCVQI1gyTnUl7vxlkcy3DeWaEoQ60nYVYQwbRM28p5TOaTKvE6gHFgk9biIQ_DXeFuNASP-xLbq5pWHEHPrJvavwjEFuRyBoEgbZKjdqfn-ziX_gh3AHwmFX2h3h1xDrvtus1ro-FPxoeHnn0PkQ5vAXA4rRqF7y8bls1YunU2DF8ujMSHg3mwTAD_JP_RJXeKJkRwKEpBVM2tynnIFSo4lYPEfwlb9N-_hUkVgSlen3cJmxu_YAJ-8vm5wQz770dZXuSgMMsWHo0w",
-];
-
 const workshopImages = [
   "/images/workshop/workshop-01.jpg",
   "/images/workshop/workshop-02.jpg",
@@ -327,24 +320,25 @@ export default function Home() {
           <div className="mx-auto max-w-[1200px] px-5 md:px-16">
             <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-24">
               <div>
-                <SectionLabel>Facility & Quality</SectionLabel>
+                <SectionLabel>About Us</SectionLabel>
                 <h2 className="mb-8 text-4xl font-bold uppercase leading-tight">
-                  Advanced Engineering Infrastructure
+                  Beverage Filling Machinery Built for Global Plants
                 </h2>
                 <p className="mb-12 text-lg leading-8 text-slate-600">
-                  Spanning 10,000sqm, our manufacturing center integrates high-precision CNC
-                  machining with a rigorous 72-hour testing protocol for every machine before
-                  global dispatch.
+                  Sokos Machinery designs and manufactures complete beverage production systems
+                  for water, juice, carbonated drinks, beer, oil, and sauce applications. From
+                  project layout to commissioning, our engineering team helps customers build
+                  stable, efficient, and easy-to-maintain filling lines.
                 </p>
                 <div className="mb-12 grid grid-cols-1 gap-8 sm:grid-cols-2">
                   <div className="flex items-start gap-4">
                     <Bot className="mt-1 text-primary" size={30} />
                     <div>
                       <h4 className="mb-2 font-mono text-xs font-medium uppercase tracking-[0.2em]">
-                        Precision CNC
+                        Turnkey Engineering
                       </h4>
                       <p className="text-sm text-slate-600">
-                        Micron-level accuracy for core mechanical components.
+                        Complete line planning from water treatment to final packaging.
                       </p>
                     </div>
                   </div>
@@ -352,29 +346,24 @@ export default function Home() {
                     <ShieldCheck className="mt-1 text-primary" size={30} />
                     <div>
                       <h4 className="mb-2 font-mono text-xs font-medium uppercase tracking-[0.2em]">
-                        Rigorous QC
+                        Reliable Delivery
                       </h4>
                       <p className="text-sm text-slate-600">
-                        Continuous stress-testing and alignment validation.
+                        Factory-tested equipment with installation support for global projects.
                       </p>
                     </div>
                   </div>
                 </div>
                 <button className="border border-primary px-8 py-4 font-mono text-xs font-medium uppercase tracking-[0.2em] text-primary transition-colors hover:bg-primary hover:text-white">
-                  Factory Virtual Tour
+                  Learn More About Sokos
                 </button>
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                {factoryImages.map((image, index) => (
-                  <img
-                    alt={`Sokos factory ${index + 1}`}
-                    className={`aspect-square w-full border border-[#e2e8f0] object-cover ${
-                      index === 1 ? "mt-8" : index === 2 ? "-mt-8" : ""
-                    }`}
-                    key={image}
-                    src={image}
-                  />
-                ))}
+              <div className="overflow-hidden border border-[#e2e8f0] bg-[#f5f7fa]">
+                <img
+                  alt="Sokos workshop"
+                  className="aspect-[4/3] w-full object-cover"
+                  src="/images/workshop/workshop-02.jpg"
+                />
               </div>
             </div>
           </div>

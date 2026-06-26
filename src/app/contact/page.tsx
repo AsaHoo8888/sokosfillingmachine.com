@@ -5,7 +5,7 @@ const heroImage =
   "https://lh3.googleusercontent.com/aida-public/AB6AXuA5QktW79y84gZY7_u8RUsGXIZvo4gpc7wlmxowcWODUDq-hrhjjR0RoBzt4IZ-5x42BElgIxs7oLRpQRA-CpEDCke0DVmRFC7IVd0ztk-3yTTkUJbF9FenoQx1dIo6BPJpAxIxdV0_VWasH82qB8onDBJYN0yC11NL5_pvEePWQkF1NGGhbQPQCH6TbprLTh3FIQ3aTzJXGbWhzy_v5jFy8SSFIErrbzCZSQr2N64VOAyXc79CCefow-MgeW14i4xRIsHcK8qil-4";
 
 const facilityImage =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuBIbqUUL5BHIc0IEEuBUcku1oW4tuKYLuyHJkUKfk-GYmelxRlO5J8AKnVmz-J7gpHj0vf49p2KlNeKf8-1ZbNQ_2EJt3gaR6LBoPR5pN-a62PbFxYRNzCF2PPy_QUIMO0jbm2sY_72pYEhM2UNV9UsYoCB3NCYGjJHZWyoVaxHAMGX7WLzWn30CPivXtrXNxpxGtsdfMWJTP1y3IVKfUAIfgtLO6nZ76AO6FzShKOHI_YbonAUiosd";
+  "/images/workshop/workshop-02.jpg";
 
 export default function ContactPage() {
   return (
@@ -70,15 +70,15 @@ export default function ContactPage() {
               <img alt="Sokos facility" className="h-full min-h-[360px] w-full object-cover" src={facilityImage} />
               <div>
                 <h3 className="mb-8 text-3xl font-semibold">Contact Information</h3>
-                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+                <div className="divide-y divide-[#e2e8f0] border-y border-[#e2e8f0] bg-white">
                   {[
                     [Mail, "Sales Inquiry", "info@sokosmachinery.com"],
                     [MessageCircle, "WhatsApp Service", "+86 123 4567 8910"],
                     [Building2, "Corporate Office", "High-Tech Industrial District, Shanghai"],
                     [Factory, "Manufacturing Factory", "Sokos Industrial Park, Zhangjiagang"],
                   ].map(([Icon, label, value]) => (
-                    <div className="flex gap-5" key={label as string}>
-                      <div className="flex size-12 shrink-0 items-center justify-center border border-[#e2e8f0] bg-white text-primary shadow-sm">
+                    <div className="flex gap-5 px-5 py-6" key={label as string}>
+                      <div className="flex size-12 shrink-0 items-center justify-center border border-[#e2e8f0] bg-[#f5f7fa] text-primary">
                         <Icon size={22} />
                       </div>
                       <div>
