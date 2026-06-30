@@ -2,8 +2,7 @@ import { Globe2, ShieldCheck, Wrench } from "lucide-react";
 import { SectionLabel } from "@/components/page-primitives";
 import { SiteFooter, SiteHeader } from "@/components/site-shell";
 
-const heroImage =
-  "/images/workshop/workshop-02.jpg";
+const heroImage = "/images/about-hero-workshop.jpg";
 
 const overviewImage =
   "https://lh3.googleusercontent.com/aida-public/AB6AXuCVGlvT8k64Us6onRKlBJtKlUPU81gSy40CKBb63f7WI84PtFLSjg1wrk5U14hyXMqbuIAqF8wR63jzdTXQJKxSuYkT_ZYybXUt5KRK5iRl5claE5s6AE-DTM6lo9xN5qE3aWNbkg1hrkBNkyB35aiJ37urncxDdCiIhBfAIa3oS2TSI-YbE-0s0Fe4kZscQuTn-ctUOPb3Vi-cIESnHf_sfPhrdIttU5VTCRjroPw7oWlnmm3VK_92tXU_W9GflyL-zjMpJbREZyc";

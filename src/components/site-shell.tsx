@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Globe2, Search, Send, Share2 } from "lucide-react";
+import { Globe2, Mail, Phone, Search, Send, Share2 } from "lucide-react";
 
 const logoUrl =
   "https://lh3.googleusercontent.com/aida-public/AB6AXuChilWMaADK030JNS-6_kKXY8jlaYgFOypPrMGnU_TDYc2c8jFamNyH2IfWHtcfr3GkpQDzgINzTvp9Fkw6KDYE_OD-Vsqr2_tHr8Cvx3aGyGbviv1SwUKue60mMP1L4osInJvzeOP_sw9FsAmcg4LrZ-TE75N65gbq7HiR106aPCXLvndheQsDVZY1XBnro2ZiExp_6BzsJdbJAYcKUSCOs84SX4zAn2au5v_cWo9fQC9l-IvzzVGwqWGm1VFYHJM3rXHQh3unF6w";
@@ -13,48 +13,97 @@ const navItems = [
   { label: "CONTACT", href: "/contact" },
 ];
 
+const contactEmail = "benny.wang10@sokosmachinery.com";
+const contactPhone = "+86 13915678357";
+const contactPhoneLink = "+8613915678357";
+
+function FloatingContactButtons() {
+  const contactItems = [
+    {
+      label: contactEmail,
+      href: `mailto:${contactEmail}`,
+      icon: Mail,
+      iconClassName: "bg-primary text-white",
+    },
+    {
+      label: contactPhone,
+      href: `tel:${contactPhoneLink}`,
+      icon: Phone,
+      iconClassName: "bg-[#131314] text-white",
+    },
+    {
+      label: "WhatsApp",
+      href: `https://wa.me/${contactPhoneLink.replace("+", "")}`,
+      icon: null,
+      iconClassName: "bg-[#25d366] text-white",
+    },
+  ];
+
+  return (
+    <div className="fixed right-4 top-1/2 z-40 flex -translate-y-1/2 flex-col gap-2">
+      {contactItems.map(({ label, href, icon: Icon, iconClassName }) => (
+        <a
+          aria-label={label}
+          className="flex size-12 items-center justify-center overflow-hidden border border-[#e2e8f0] bg-white shadow-lg shadow-black/10 transition-colors hover:border-primary"
+          href={href}
+          key={label}
+          rel={href.startsWith("http") ? "noreferrer" : undefined}
+          target={href.startsWith("http") ? "_blank" : undefined}
+        >
+          <span className={`flex size-12 shrink-0 items-center justify-center ${iconClassName}`}>
+            {Icon ? <Icon size={18} /> : <span className="font-mono text-[11px] font-bold">WA</span>}
+          </span>
+        </a>
+      ))}
+    </div>
+  );
+}
+
 export function SiteHeader({ active = "HOME" }: { active?: string }) {
   return (
-    <header className="fixed left-0 top-0 z-50 w-full border-b border-[#e2e8f0] bg-white/90 backdrop-blur-md">
-      <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-8 px-5 py-5 md:px-10 md:py-6 xl:px-16">
-        <div className="flex items-center gap-10">
-          <Link href="/">
-            <img alt="Sokos Machinery Logo" className="h-11 w-auto" src={logoUrl} />
-          </Link>
-          <nav className="hidden items-center gap-6 lg:flex xl:gap-8">
-            {navItems.map((item) => (
-              <Link
-                className={`font-mono text-xs font-medium tracking-[0.16em] transition-colors ${
-                  item.label === active
-                    ? "border-b-2 border-primary pb-1 text-primary"
-                    : "text-slate-600 hover:text-primary"
-                }`}
-                href={item.href}
-                key={item.label}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
+    <>
+      <header className="fixed left-0 top-0 z-50 w-full border-b border-[#e2e8f0] bg-white/90 backdrop-blur-md">
+        <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-8 px-5 py-5 md:px-10 md:py-6 xl:px-16">
+          <div className="flex items-center gap-10">
+            <Link href="/">
+              <img alt="Sokos Machinery Logo" className="h-11 w-auto" src={logoUrl} />
+            </Link>
+            <nav className="hidden items-center gap-6 lg:flex xl:gap-8">
+              {navItems.map((item) => (
+                <Link
+                  className={`font-mono text-xs font-medium tracking-[0.16em] transition-colors ${
+                    item.label === active
+                      ? "border-b-2 border-primary pb-1 text-primary"
+                      : "text-slate-600 hover:text-primary"
+                  }`}
+                  href={item.href}
+                  key={item.label}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+          <div className="flex shrink-0 items-center gap-4 md:gap-6">
+            <Search className="text-slate-600 transition-colors hover:text-primary" size={21} />
+            <button
+              className="inline-flex items-center gap-2 font-mono text-xs font-medium uppercase tracking-[0.16em] text-slate-600 transition-colors hover:text-primary"
+              type="button"
+            >
+              <Globe2 size={18} />
+              EN
+            </button>
+            <Link
+              className="hidden items-center justify-center bg-primary px-6 py-4 font-mono text-xs font-medium uppercase tracking-[0.2em] text-primary-foreground shadow-lg shadow-primary/20 transition-colors hover:bg-primary/90 sm:inline-flex"
+              href="/contact"
+            >
+              Request Quote
+            </Link>
+          </div>
         </div>
-        <div className="flex shrink-0 items-center gap-4 md:gap-6">
-          <Search className="text-slate-600 transition-colors hover:text-primary" size={21} />
-          <button
-            className="inline-flex items-center gap-2 font-mono text-xs font-medium uppercase tracking-[0.16em] text-slate-600 transition-colors hover:text-primary"
-            type="button"
-          >
-            <Globe2 size={18} />
-            EN
-          </button>
-          <Link
-            className="hidden items-center justify-center bg-primary px-6 py-4 font-mono text-xs font-medium uppercase tracking-[0.2em] text-primary-foreground shadow-lg shadow-primary/20 transition-colors hover:bg-primary/90 sm:inline-flex"
-            href="/contact"
-          >
-            Request Quote
-          </Link>
-        </div>
-      </div>
-    </header>
+      </header>
+      <FloatingContactButtons />
+    </>
   );
 }
 

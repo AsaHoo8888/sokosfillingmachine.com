@@ -182,6 +182,50 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="bg-[#f5f7fa] py-24 lg:py-[120px]" id="turnkey-solutions">
+          <div className="mx-auto w-full max-w-[1440px] px-5 md:px-10 xl:px-16">
+            <div className="mb-12 text-center">
+              <span className="mb-4 block font-mono text-xs font-medium uppercase tracking-[0.22em] text-primary">
+                Complete Engineering
+              </span>
+              <h2 className="mb-4 text-4xl font-bold uppercase">Turnkey Production Lines</h2>
+              <p className="mx-auto max-w-2xl text-slate-600">
+                Integrated production lines engineered for beverage plants that need stable
+                output and clean layouts.
+              </p>
+            </div>
+
+            <div className="flex flex-col items-stretch gap-5 lg:flex-row lg:items-center">
+              <article className="relative min-h-[420px] flex-1 overflow-hidden border border-[#e2e8f0] bg-white shadow-xl">
+                <img
+                  alt={solution.title}
+                  className="size-full min-h-[420px] object-cover"
+                  src={solution.image}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/5 to-transparent" />
+                <div className="absolute bottom-0 left-0 w-full p-6 text-white md:p-12">
+                  <h3 className="mb-2 text-2xl font-semibold uppercase md:text-3xl">
+                    {solution.title}
+                  </h3>
+                  <p className="mb-6 max-w-2xl text-white/85">{solution.description}</p>
+                  <PrimaryButton>{solution.cta}</PrimaryButton>
+                </div>
+              </article>
+
+              <button
+                aria-label="Show next production line"
+                className="flex h-14 w-full items-center justify-center text-primary transition-colors hover:text-[#131314] lg:h-[420px] lg:w-16"
+                onClick={() => setActiveSolution((current) => (current + 1) % solutions.length)}
+              >
+                <span className="flex flex-col items-center gap-12">
+                  <ArrowUp size={34} strokeWidth={1.15} />
+                  <ArrowDown size={34} strokeWidth={1.15} />
+                </span>
+              </button>
+            </div>
+          </div>
+        </section>
+
         <section className="industrial-grid bg-white py-24 lg:py-[120px]">
           <div className="mx-auto max-w-[1200px] px-5 md:px-16">
             <div className="mb-16 flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
@@ -235,50 +279,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-[#f5f7fa] py-24 lg:py-[120px]" id="turnkey-solutions">
-          <div className="mx-auto w-full max-w-[1440px] px-5 md:px-10 xl:px-16">
-            <div className="mb-12 text-center">
-              <span className="mb-4 block font-mono text-xs font-medium uppercase tracking-[0.22em] text-primary">
-                Complete Engineering
-              </span>
-              <h2 className="mb-4 text-4xl font-bold uppercase">Turnkey Production Lines</h2>
-              <p className="mx-auto max-w-2xl text-slate-600">
-                Integrated production lines engineered for beverage plants that need stable
-                output and clean layouts.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-stretch gap-5 lg:flex-row lg:items-center">
-              <article className="relative min-h-[420px] flex-1 overflow-hidden border border-[#e2e8f0] bg-white shadow-xl">
-                <img
-                  alt={solution.title}
-                  className="size-full min-h-[420px] object-cover"
-                  src={solution.image}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/5 to-transparent" />
-                <div className="absolute bottom-0 left-0 w-full p-6 text-white md:p-12">
-                  <h3 className="mb-2 text-2xl font-semibold uppercase md:text-3xl">
-                    {solution.title}
-                  </h3>
-                  <p className="mb-6 max-w-2xl text-white/85">{solution.description}</p>
-                  <PrimaryButton>{solution.cta}</PrimaryButton>
-                </div>
-              </article>
-
-              <button
-                aria-label="Show next production line"
-                className="flex h-14 w-full items-center justify-center text-primary transition-colors hover:text-[#131314] lg:h-[420px] lg:w-16"
-                onClick={() => setActiveSolution((current) => (current + 1) % solutions.length)}
-              >
-                <span className="flex flex-col items-center gap-12">
-                  <ArrowUp size={34} strokeWidth={1.15} />
-                  <ArrowDown size={34} strokeWidth={1.15} />
-                </span>
-              </button>
-            </div>
-          </div>
-        </section>
-
         <section className="relative overflow-hidden bg-white py-24 lg:py-[120px]">
           <div
             className="absolute inset-0 bg-cover bg-center opacity-50"
@@ -291,7 +291,7 @@ export default function Home() {
               <h2 className="mb-8 text-4xl font-bold uppercase leading-tight">
                 Beverage Filling Machinery Built for Global Plants
               </h2>
-              <p className="mb-12 text-lg leading-8 text-slate-600">
+              <p className="mb-12 text-lg leading-8 text-slate-800">
                 Sokos Machinery designs and manufactures complete beverage production systems
                 for water, juice, carbonated drinks, beer, oil, and sauce applications. From
                 project layout to commissioning, our engineering team helps customers build
@@ -301,10 +301,10 @@ export default function Home() {
                 <div className="flex items-start gap-4">
                   <Bot className="mt-1 text-primary" size={30} />
                   <div>
-                    <h4 className="mb-2 font-mono text-xs font-medium uppercase tracking-[0.2em]">
+                    <h4 className="mb-2 font-mono text-xs font-medium uppercase tracking-[0.2em] text-[#131314]">
                       Turnkey Engineering
                     </h4>
-                    <p className="text-sm text-slate-600">
+                    <p className="text-sm text-slate-800">
                       Complete line planning from water treatment to final packaging.
                     </p>
                   </div>
@@ -312,10 +312,10 @@ export default function Home() {
                 <div className="flex items-start gap-4">
                   <ShieldCheck className="mt-1 text-primary" size={30} />
                   <div>
-                    <h4 className="mb-2 font-mono text-xs font-medium uppercase tracking-[0.2em]">
+                    <h4 className="mb-2 font-mono text-xs font-medium uppercase tracking-[0.2em] text-[#131314]">
                       Reliable Delivery
                     </h4>
-                    <p className="text-sm text-slate-600">
+                    <p className="text-sm text-slate-800">
                       Factory-tested equipment with installation support for global projects.
                     </p>
                   </div>

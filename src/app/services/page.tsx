@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { SiteFooter, SiteHeader } from "@/components/site-shell";
 
 const heroImage =
@@ -196,29 +195,6 @@ export default function ServicesPage() {
               <div className="industrial-grid absolute -inset-10 opacity-20" />
               <div className="relative z-10 border border-[#e2e8f0] shadow-xl">
                 <img alt="Global support network map" className="aspect-square w-full object-cover" src={mapImage} />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="relative overflow-hidden bg-primary py-24 lg:py-[120px]">
-          <div className="industrial-grid absolute inset-0 opacity-10" />
-          <div className="relative z-10 mx-auto max-w-[1200px] px-5 md:px-16">
-            <div className="flex flex-col items-center gap-12 border border-white/20 bg-white p-10 shadow-2xl lg:flex-row lg:p-20">
-              <div className="lg:w-2/3">
-                <h2 className="mb-4 text-4xl font-bold">Restore Operational Excellence</h2>
-                <p className="text-lg leading-8 text-slate-600">
-                  Immediate technical assistance for critical failures or scheduled maintenance
-                  planning.
-                </p>
-              </div>
-              <div className="w-full lg:w-1/3">
-                <Link
-                  className="flex w-full items-center justify-center bg-primary px-8 py-6 font-mono text-xs font-bold uppercase tracking-[0.16em] text-white shadow-lg"
-                  href="/contact"
-                >
-                  Request Technical Support
-                </Link>
               </div>
             </div>
           </div>
