@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, DraftingCompass, Factory, Globe2, Settings } from "lucide-react";
+import { ArrowRight, DraftingCompass, Factory, Globe2 } from "lucide-react";
 import { SiteFooter, SiteHeader } from "@/components/site-shell";
 
 const heroImage =
@@ -178,12 +178,7 @@ export default function SolutionsPage() {
                 </article>
               ))}
             </div>
-          </div>
-        </section>
-
-        <section className="industrial-grid bg-white py-24 lg:py-[120px]">
-          <div className="mx-auto max-w-[1200px] px-5 md:px-16">
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
               {advantages.map(([Icon, title, description]) => (
                 <article
                   className="border border-[#e2e8f0] bg-white p-8 shadow-sm transition-all hover:shadow-lg"
@@ -194,29 +189,6 @@ export default function SolutionsPage() {
                   <p className="leading-7 text-slate-600">{description as string}</p>
                 </article>
               ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="relative overflow-hidden bg-white py-24 lg:py-[120px]">
-          <Settings className="absolute right-10 top-8 text-primary opacity-5" size={190} />
-          <div className="relative z-10 mx-auto max-w-[1200px] px-5 md:px-16">
-            <div className="flex flex-col items-center justify-between gap-10 bg-primary p-10 shadow-2xl md:flex-row md:p-16">
-              <div className="text-center md:text-left">
-                <h2 className="mb-4 text-4xl font-extrabold text-white md:text-6xl">
-                  Ready to Start Your Project?
-                </h2>
-                <p className="max-w-xl text-lg leading-8 text-white/90">
-                  Consult with our engineering experts today for a customized line layout and
-                  technical quote.
-                </p>
-              </div>
-              <Link
-                className="inline-flex shrink-0 items-center justify-center bg-white px-12 py-5 font-mono text-xs font-bold uppercase tracking-[0.2em] text-primary shadow-xl transition-colors hover:bg-[#f5f7fa]"
-                href="/contact"
-              >
-                Request A Quote
-              </Link>
             </div>
           </div>
         </section>

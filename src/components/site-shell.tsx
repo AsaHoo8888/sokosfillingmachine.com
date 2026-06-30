@@ -112,19 +112,33 @@ export function SiteFooter() {
         ))}
         <div>
           <h4 className="mb-8 font-mono text-xs font-medium uppercase tracking-[0.2em]">
-            Newsletter
+            Inquiry Form
           </h4>
           <p className="mb-6 font-mono text-sm text-slate-600">
-            Join our network for latest technical insights.
+            Send your production requirements to our technical sales team.
           </p>
           <form className="flex flex-col gap-3">
+            <input
+              className="border border-[#e2e8f0] bg-[#f5f7fa] px-4 py-3 text-sm outline-none transition-colors placeholder:text-slate-400 focus:border-primary"
+              placeholder="YOUR NAME"
+              type="text"
+            />
             <input
               className="border border-[#e2e8f0] bg-[#f5f7fa] px-4 py-3 text-sm outline-none transition-colors placeholder:text-slate-400 focus:border-primary"
               placeholder="EMAIL ADDRESS"
               type="email"
             />
+            <input
+              className="border border-[#e2e8f0] bg-[#f5f7fa] px-4 py-3 text-sm outline-none transition-colors placeholder:text-slate-400 focus:border-primary"
+              placeholder="PHONE / WHATSAPP"
+              type="tel"
+            />
+            <textarea
+              className="min-h-24 resize-none border border-[#e2e8f0] bg-[#f5f7fa] px-4 py-3 text-sm outline-none transition-colors placeholder:text-slate-400 focus:border-primary"
+              placeholder="PROJECT REQUIREMENTS"
+            />
             <button className="inline-flex items-center justify-center gap-2 bg-primary py-3 font-mono text-xs font-medium uppercase tracking-[0.2em] text-white shadow-md transition-colors hover:bg-primary/90">
-              Subscribe <Send size={14} />
+              Submit <Send size={14} />
             </button>
           </form>
         </div>

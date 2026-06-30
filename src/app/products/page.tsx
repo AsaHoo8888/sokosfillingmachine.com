@@ -52,64 +52,39 @@ export default function ProductsPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_260px]">
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                {categories.map(([title, description, code, spec]) => (
-                  <article
-                    className="group flex flex-col border border-[#e2e8f0] bg-white shadow-sm transition-all hover:border-primary hover:shadow-lg"
-                    key={title}
-                  >
-                    <div className="relative aspect-[16/9] overflow-hidden border-b border-[#e2e8f0]">
-                      <img
-                        alt={title}
-                        className="size-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        src={productImage}
-                      />
-                      <div className="absolute left-4 top-4 bg-primary px-2 py-1 font-mono text-[10px] text-white">
-                        {code}
-                      </div>
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {categories.map(([title, description, code, spec]) => (
+                <article
+                  className="group flex flex-col border border-[#e2e8f0] bg-white shadow-sm transition-all hover:border-primary hover:shadow-lg"
+                  key={title}
+                >
+                  <div className="relative aspect-[16/9] overflow-hidden border-b border-[#e2e8f0]">
+                    <img
+                      alt={title}
+                      className="size-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      src={productImage}
+                    />
+                    <div className="absolute left-4 top-4 bg-primary px-2 py-1 font-mono text-[10px] text-white">
+                      {code}
                     </div>
-                    <div className="flex flex-1 flex-col p-8">
-                      <h3 className="mb-3 text-2xl font-semibold transition-colors group-hover:text-primary">
-                        {title}
-                      </h3>
-                      <p className="mb-8 text-sm leading-6 text-slate-600">{description}</p>
-                      <div className="mt-auto flex items-center justify-between border-t border-[#e2e8f0] pt-5">
-                        <span className="font-mono text-xs text-primary">{spec}</span>
-                        <Link href="/products/water-filling-monoblock">
-                          <ArrowRight className="text-primary transition-transform group-hover:translate-x-1" size={18} />
-                        </Link>
-                      </div>
+                  </div>
+                  <div className="flex flex-1 flex-col p-8">
+                    <h3 className="mb-3 text-2xl font-semibold transition-colors group-hover:text-primary">
+                      {title}
+                    </h3>
+                    <p className="mb-8 text-sm leading-6 text-slate-600">{description}</p>
+                    <div className="mt-auto flex items-center justify-between border-t border-[#e2e8f0] pt-5">
+                      <span className="font-mono text-xs text-primary">{spec}</span>
+                      <Link href="/products/water-filling-monoblock">
+                        <ArrowRight
+                          className="text-primary transition-transform group-hover:translate-x-1"
+                          size={18}
+                        />
+                      </Link>
                     </div>
-                  </article>
-                ))}
-              </div>
-
-              <aside className="border border-[#e2e8f0] bg-white p-6 lg:sticky lg:top-28 lg:self-start">
-                <h3 className="mb-6 font-mono text-xs font-medium uppercase tracking-[0.2em] text-slate-500">
-                  Categories
-                </h3>
-                <nav className="flex flex-col">
-                  {[
-                    "All Machinery",
-                    "Water Treatment",
-                    "Bottle Blow Molding",
-                    "Filling Machine",
-                    "Packaging Machine",
-                    "Turnkey Lines",
-                  ].map((item, index) => (
-                    <a
-                      className={`border-t border-[#e2e8f0] py-4 text-sm font-medium transition-colors hover:text-primary ${
-                        index === 0 ? "text-primary" : "text-slate-600"
-                      }`}
-                      href="#"
-                      key={item}
-                    >
-                      {item}
-                    </a>
-                  ))}
-                </nav>
-              </aside>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
         </section>

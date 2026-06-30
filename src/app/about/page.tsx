@@ -1,6 +1,3 @@
-"use client";
-
-import { useState } from "react";
 import { Globe2, ShieldCheck, Wrench } from "lucide-react";
 import { SectionLabel } from "@/components/page-primitives";
 import { SiteFooter, SiteHeader } from "@/components/site-shell";
@@ -17,55 +14,16 @@ const capabilityImages = [
   "https://lh3.googleusercontent.com/aida-public/AB6AXuCTpXchbzwF2-9cQKIFfqrZUOJ1TajSxewPezB8X_l8idL9PL2WdN05ygbOKNya2aYWHC-UW3hMsSOS097oWPsEhZaOQ8lfRy4dfurRPgp-5LRITkx6Py-zyXWgz4oyXSL-BiG7aVdhvdg21xHqSLbDqjIoGgFlgy6zScxHohaMaWBouvZYVwaUbKtL6jVw2RoiHbv5PrZz0AE27__wvVMNJY4_DANSSBHkilRF9NWVBadBhv0rztM03FPD6xyLZ8a-Smh26Q58AWc",
 ];
 
-const historyItems = [
-  {
-    year: "2014",
-    title: "Zhangjiagang Sokos Machinery Established",
-    text: "With the support of foreign clients, Zhangjiagang Sokos Machinery Co., Ltd. was established.",
-    image: overviewImage,
-  },
-  {
-    year: "2015",
-    title: "Enterprise Honors and Domestic Partnerships",
-    text: "Obtained multiple domestic enterprise honor certificates; collaborated with listed companies and top beverage companies in China.",
-    image: capabilityImages[0],
-  },
-  {
-    year: "2016",
-    title: "Overseas Market Expansion",
-    text: "Rapid business development, overseas market exploration, and international certificates including CE, ISO, SGS, and Gold Supplier.",
-    image: heroImage,
-  },
-  {
-    year: "2017",
-    title: "Mechanical Design Team Expanded",
-    text: "Hired 8 mechanical design engineers to study new technical structures.",
-    image: capabilityImages[2],
-  },
-  {
-    year: "2019",
-    title: "Products Exported to 42 Countries",
-    text: "Exported products to 42 countries.",
-    image: capabilityImages[1],
-  },
-  {
-    year: "2021",
-    title: "Technical Patents Reached 11",
-    text: "The company reached 11 technical patents.",
-    image: overviewImage,
-  },
-  {
-    year: "2023",
-    title: "Exports Reached 60 Countries",
-    text: "Overseas trade developed rapidly, with exports to 60 countries.",
-    image: heroImage,
-  },
+const certificateItems = [
+  "CE Certification",
+  "ISO Certification",
+  "SGS Verification",
+  "Gold Supplier",
+  "Patent Certificate",
+  "Enterprise Honor",
 ];
 
 export default function AboutPage() {
-  const [activeHistoryIndex, setActiveHistoryIndex] = useState(0);
-  const activeHistory = historyItems[activeHistoryIndex];
-
   return (
     <main className="bg-[#f5f7fa] text-[#131314]">
       <div className="mx-auto min-h-screen max-w-[2000px] bg-white shadow-sm">
@@ -193,59 +151,33 @@ export default function AboutPage() {
 
         <section className="bg-white py-24 lg:py-[120px]">
           <div className="mx-auto max-w-[1200px] px-5 md:px-16">
-            <SectionLabel>Development History</SectionLabel>
-            <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-[1fr_0.95fr]">
+            <div className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <div>
-                <p className="mb-3 font-mono text-sm uppercase tracking-[0.2em] text-primary">
-                  {activeHistory.year}
-                </p>
-                <h2 className="mb-6 text-4xl font-semibold md:text-5xl">
-                  {activeHistory.title}
-                </h2>
-                <p className="max-w-2xl text-base leading-7 text-slate-600">
-                  {activeHistory.text}
-                </p>
+                <SectionLabel>Certificates</SectionLabel>
+                <h2 className="text-4xl font-semibold uppercase">Certifications & Honors</h2>
               </div>
-
-              <div className="aspect-[1.15/1] overflow-hidden bg-[#d9d9d9]">
-                <img
-                  alt={`${activeHistory.year} company milestone`}
-                  className="size-full object-cover grayscale transition-opacity duration-300"
-                  src={activeHistory.image}
-                />
-              </div>
+              <p className="max-w-xl text-sm leading-6 text-slate-600">
+                International quality certifications, supplier credentials, and technical honors
+                that support reliable global project delivery.
+              </p>
             </div>
 
-            <div className="mt-16 overflow-x-auto pb-2">
-              <div className="relative min-w-[760px]">
-                <div className="relative grid grid-cols-7">
-                  {historyItems.map((item, index) => (
-                    <button
-                      className="group flex flex-col items-center gap-3"
-                      key={item.year}
-                      onClick={() => setActiveHistoryIndex(index)}
-                      type="button"
-                    >
-                      <div className="flex w-full items-center">
-                        <div className="h-px flex-1 bg-[#d9d9d9]" />
-                        <div
-                          className={`relative z-10 size-4 rounded-full border-4 border-white transition-colors ${
-                            activeHistoryIndex === index ? "bg-primary" : "bg-[#131314]"
-                          }`}
-                        />
-                        <div className="h-px flex-1 bg-[#d9d9d9]" />
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {certificateItems.map((certificate) => (
+                <article className="border border-[#e2e8f0] bg-white p-4 shadow-sm" key={certificate}>
+                  <div className="flex aspect-[4/3] items-center justify-center bg-[#d9d9d9]">
+                    <div className="text-center">
+                      <div className="mx-auto mb-4 flex size-14 items-center justify-center rounded-full bg-white/70 text-[#9ca3af]">
+                        <span className="font-mono text-sm font-semibold">IMG</span>
                       </div>
-                      <span
-                        className={`text-lg font-bold transition-colors ${
-                          activeHistoryIndex === index ? "text-primary" : "text-[#131314]"
-                        }`}
-                      >
-                        {item.year}
-                      </span>
-                    </button>
-                  ))}
-                </div>
-              </div>
+                      <p className="font-mono text-xs uppercase tracking-[0.18em] text-[#9ca3af]">
+                        Certificate Image
+                      </p>
+                    </div>
+                  </div>
+                  <h3 className="mt-5 text-lg font-semibold">{certificate}</h3>
+                </article>
+              ))}
             </div>
           </div>
         </section>

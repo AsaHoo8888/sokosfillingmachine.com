@@ -79,7 +79,7 @@ export default function WaterFillingLinePage() {
         <section className="relative overflow-hidden px-5 pb-24 pt-40 md:px-16 lg:pb-[120px]">
           <div
             className="absolute inset-0 bg-cover bg-center opacity-95"
-            style={{ backgroundImage: "url('/images/water-line-2.jpg')" }}
+            style={{ backgroundImage: "url('/images/water-filling-line-hero.jpg')" }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/55 to-white/15" />
           <div className="relative mx-auto max-w-[1200px]">

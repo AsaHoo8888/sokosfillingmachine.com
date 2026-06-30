@@ -2,14 +2,10 @@
 
 import { useState } from "react";
 import {
-  ArrowLeft,
   ArrowRight,
   Bot,
-  Download,
   Factory,
   Globe2,
-  Mail,
-  MessageCircle,
   Settings,
   ShieldCheck,
   Wrench,
@@ -122,17 +118,6 @@ const advantages: {
   },
 ];
 
-const partnerBrands = [
-  { name: "ABB", logo: "/images/brands/abb.svg" },
-  { name: "SMC", logo: "/images/brands/smc.svg" },
-  { name: "Mitsubishi Electric", logo: "/images/brands/mitsubishi-electric.svg" },
-  { name: "Schneider Electric", logo: "/images/brands/schneider-electric.svg" },
-  { name: "OMRON", logo: "/images/brands/omron.svg" },
-  { name: "SIEMENS", logo: "/images/brands/siemens.svg" },
-  { name: "FESTO", logo: "/images/brands/festo.svg" },
-  { name: "TECO", logo: "/images/brands/teco.svg" },
-];
-
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <div className="mb-4 flex items-center gap-2">
@@ -154,11 +139,7 @@ function PrimaryButton({ children }: { children: React.ReactNode }) {
 
 export default function Home() {
   const [activeSolution, setActiveSolution] = useState(0);
-  const [activeWorkshop, setActiveWorkshop] = useState(0);
   const solution = solutions[activeSolution];
-  const visibleWorkshopImages = [0, 1, 2, 3, 4].map(
-    (offset) => workshopImages[(activeWorkshop + offset) % workshopImages.length],
-  );
 
   return (
     <main className="bg-[#f5f7fa] text-[#131314]">
@@ -181,7 +162,7 @@ export default function Home() {
                   ISO 9001:2015 Certified
                 </span>
               </div>
-              <h1 className="mb-8 max-w-4xl text-5xl font-bold uppercase leading-tight text-[#131314] md:text-7xl">
+              <h1 className="mb-8 max-w-4xl text-3xl font-bold uppercase leading-tight text-[#131314] md:text-5xl">
                 Complete Beverage Filling & Packaging Solutions
               </h1>
               <p className="mb-12 max-w-2xl text-lg leading-8 text-slate-600">
@@ -198,24 +179,6 @@ export default function Home() {
                 </button>
               </div>
             </div>
-          </div>
-        </section>
-
-        <section className="border-y border-[#e2e8f0] bg-white py-12">
-          <div className="mx-auto grid max-w-[1200px] grid-cols-2 gap-10 px-5 md:grid-cols-4 md:px-16">
-            {[
-              ["20+", "Years of Excellence"],
-              ["80+", "Countries Served"],
-              ["100%", "Turnkey Capability"],
-              ["CE", "International Quality"],
-            ].map(([value, label]) => (
-              <div className="flex flex-col gap-1" key={label}>
-                <span className="text-4xl font-bold text-primary">{value}</span>
-                <span className="font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-slate-600">
-                  {label}
-                </span>
-              </div>
-            ))}
           </div>
         </section>
 
@@ -316,148 +279,60 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-white py-24 lg:py-[120px]">
-          <div className="mx-auto max-w-[1200px] px-5 md:px-16">
-            <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-24">
-              <div>
-                <SectionLabel>About Us</SectionLabel>
-                <h2 className="mb-8 text-4xl font-bold uppercase leading-tight">
-                  Beverage Filling Machinery Built for Global Plants
-                </h2>
-                <p className="mb-12 text-lg leading-8 text-slate-600">
-                  Sokos Machinery designs and manufactures complete beverage production systems
-                  for water, juice, carbonated drinks, beer, oil, and sauce applications. From
-                  project layout to commissioning, our engineering team helps customers build
-                  stable, efficient, and easy-to-maintain filling lines.
-                </p>
-                <div className="mb-12 grid grid-cols-1 gap-8 sm:grid-cols-2">
-                  <div className="flex items-start gap-4">
-                    <Bot className="mt-1 text-primary" size={30} />
-                    <div>
-                      <h4 className="mb-2 font-mono text-xs font-medium uppercase tracking-[0.2em]">
-                        Turnkey Engineering
-                      </h4>
-                      <p className="text-sm text-slate-600">
-                        Complete line planning from water treatment to final packaging.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <ShieldCheck className="mt-1 text-primary" size={30} />
-                    <div>
-                      <h4 className="mb-2 font-mono text-xs font-medium uppercase tracking-[0.2em]">
-                        Reliable Delivery
-                      </h4>
-                      <p className="text-sm text-slate-600">
-                        Factory-tested equipment with installation support for global projects.
-                      </p>
-                    </div>
+        <section className="relative overflow-hidden bg-white py-24 lg:py-[120px]">
+          <div
+            className="absolute inset-0 bg-cover bg-center opacity-50"
+            style={{ backgroundImage: "url('/images/about-factory-bg.jpg')" }}
+          />
+          <div className="absolute inset-0 bg-white/45" />
+          <div className="relative mx-auto max-w-[1200px] px-5 md:px-16">
+            <div className="max-w-3xl">
+              <SectionLabel>About Us</SectionLabel>
+              <h2 className="mb-8 text-4xl font-bold uppercase leading-tight">
+                Beverage Filling Machinery Built for Global Plants
+              </h2>
+              <p className="mb-12 text-lg leading-8 text-slate-600">
+                Sokos Machinery designs and manufactures complete beverage production systems
+                for water, juice, carbonated drinks, beer, oil, and sauce applications. From
+                project layout to commissioning, our engineering team helps customers build
+                stable, efficient, and easy-to-maintain filling lines.
+              </p>
+              <div className="mb-12 grid grid-cols-1 gap-8 sm:grid-cols-2">
+                <div className="flex items-start gap-4">
+                  <Bot className="mt-1 text-primary" size={30} />
+                  <div>
+                    <h4 className="mb-2 font-mono text-xs font-medium uppercase tracking-[0.2em]">
+                      Turnkey Engineering
+                    </h4>
+                    <p className="text-sm text-slate-600">
+                      Complete line planning from water treatment to final packaging.
+                    </p>
                   </div>
                 </div>
-                <button className="border border-primary px-8 py-4 font-mono text-xs font-medium uppercase tracking-[0.2em] text-primary transition-colors hover:bg-primary hover:text-white">
-                  Learn More About Sokos
-                </button>
+                <div className="flex items-start gap-4">
+                  <ShieldCheck className="mt-1 text-primary" size={30} />
+                  <div>
+                    <h4 className="mb-2 font-mono text-xs font-medium uppercase tracking-[0.2em]">
+                      Reliable Delivery
+                    </h4>
+                    <p className="text-sm text-slate-600">
+                      Factory-tested equipment with installation support for global projects.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="overflow-hidden border border-[#e2e8f0] bg-[#f5f7fa]">
-                <img
-                  alt="Sokos workshop"
-                  className="aspect-[4/3] w-full object-cover"
-                  src="/images/workshop/workshop-02.jpg"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="overflow-hidden bg-white py-24 lg:py-[120px]">
-          <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-16">
-            <div className="mb-16 text-center">
-              <h2 className="mb-6 text-4xl font-bold">Our workshop</h2>
-              <p className="mx-auto max-w-2xl text-sm leading-6 text-[#131314]">
-                CNC machines, welding stations, and quality control labs where every machine is
-                tested before it ships
-              </p>
-            </div>
-
-            <div className="relative overflow-hidden">
-              <button
-                aria-label="Previous workshop image"
-                className="absolute left-0 top-1/2 z-10 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#9ca3af] bg-white text-[#131314] shadow-sm transition-colors hover:border-primary hover:text-primary"
-                onClick={() =>
-                  setActiveWorkshop((current) =>
-                    current === 0 ? workshopImages.length - 1 : current - 1,
-                  )
-                }
-                type="button"
-              >
-                <ArrowLeft size={18} />
-              </button>
-
-              <div className="flex gap-7">
-                {visibleWorkshopImages.map((image, index) => (
-                  <article
-                    className="aspect-[4/3] shrink-0 basis-full overflow-hidden bg-[#d9d9d9] md:basis-[calc((100%-84px)/3.5)]"
-                    key={`${image}-${index}`}
-                  >
-                    <img
-                      alt={`Sokos workshop ${index + 1}`}
-                      className="size-full object-cover"
-                      src={image}
-                    />
-                  </article>
-                ))}
-              </div>
-
-              <button
-                aria-label="Next workshop image"
-                className="absolute right-5 top-1/2 z-10 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#9ca3af] bg-white text-[#131314] shadow-sm transition-colors hover:border-primary hover:text-primary"
-                onClick={() =>
-                  setActiveWorkshop((current) => (current + 1) % workshopImages.length)
-                }
-                type="button"
-              >
-                <ArrowRight size={18} />
+              <button className="border border-primary px-8 py-4 font-mono text-xs font-medium uppercase tracking-[0.2em] text-primary transition-colors hover:bg-primary hover:text-white">
+                Learn More About Sokos
               </button>
             </div>
-
-            <div className="mt-10 flex justify-center gap-2">
+            <div className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5">
               {workshopImages.map((image, index) => (
-                <button
-                  aria-label={`Show workshop image ${index + 1}`}
-                  className={`size-1.5 rounded-full transition-all ${
-                    activeWorkshop === index ? "bg-[#131314]" : "bg-[#c4c4c4]"
-                  }`}
-                  key={`${image}-dot-${index}`}
-                  onClick={() => setActiveWorkshop(index)}
-                  type="button"
+                <img
+                  alt={`Sokos workshop ${index + 1}`}
+                  className="aspect-[4/3] w-full border border-[#e2e8f0] object-cover"
+                  key={image}
+                  src={image}
                 />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="border-y border-[#e2e8f0] bg-[#f5f7fa] py-20 lg:py-24">
-          <div className="mx-auto max-w-[1200px] px-5 md:px-16">
-            <div className="mb-12 text-center">
-              <h2 className="mb-4 text-4xl font-bold">Cooperation Brands</h2>
-              <p className="mx-auto max-w-2xl text-sm leading-6 text-slate-600">
-                We integrate globally recognized electrical, pneumatic, and automation brands
-                into reliable beverage production systems.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-              {partnerBrands.map((brand) => (
-                <article
-                  className="flex h-32 items-center justify-center border border-[#e2e8f0] bg-white px-6 text-center shadow-sm transition-all hover:border-primary/30 hover:shadow-md"
-                  key={brand.name}
-                >
-                  <img
-                    alt={brand.name}
-                    className="max-h-20 max-w-full object-contain"
-                    src={brand.logo}
-                  />
-                </article>
               ))}
             </div>
           </div>
@@ -522,34 +397,6 @@ export default function Home() {
                 <div className="absolute left-[75%] top-[45%] size-3 animate-pulse rounded-full bg-primary shadow-[0_0_15px_#064c95]" />
                 <div className="absolute left-[45%] top-[55%] size-3 animate-pulse rounded-full bg-primary shadow-[0_0_15px_#064c95]" />
                 <div className="absolute left-[25%] top-[65%] size-3 animate-pulse rounded-full bg-primary shadow-[0_0_15px_#064c95]" />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-[#f5f7fa] py-24 lg:py-[120px]">
-          <div className="mx-auto max-w-[1200px] border-x border-[#e2e8f0] bg-white px-5 py-20 text-center md:px-16 lg:py-24">
-            <h2 className="mb-8 text-4xl font-bold uppercase">Initiate Your Production Upgrade</h2>
-            <p className="mx-auto mb-16 max-w-2xl text-lg text-slate-600">
-              Consult with our engineering department for a technical evaluation and custom
-              plant layout design.
-            </p>
-            <div className="flex flex-col justify-center gap-6 sm:flex-row">
-              <PrimaryButton>
-                Request A Quote <Mail size={18} />
-              </PrimaryButton>
-              <button className="inline-flex items-center justify-center gap-4 border border-black/10 bg-white px-8 py-4 font-mono text-xs font-medium uppercase tracking-[0.2em] transition-colors hover:border-primary hover:text-primary">
-                Download Catalog <Download size={18} />
-              </button>
-            </div>
-            <div className="mt-20 flex flex-wrap items-center justify-center gap-8 border-t border-[#e2e8f0] pt-12 text-slate-600 md:gap-12">
-              <div className="flex items-center gap-3">
-                <MessageCircle className="text-primary" size={20} />
-                <span className="font-mono text-sm">WHATSAPP: +86-138-XXXX-XXXX</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Mail className="text-primary" size={20} />
-                <span className="font-mono text-sm">EMAIL: INFO@SOKOSMACHINERY.COM</span>
               </div>
             </div>
           </div>
