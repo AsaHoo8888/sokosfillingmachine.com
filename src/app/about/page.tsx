@@ -14,12 +14,51 @@ const capabilityImages = [
 ];
 
 const certificateItems = [
-  "CE Certification",
-  "ISO Certification",
-  "SGS Verification",
-  "Gold Supplier",
-  "Patent Certificate",
-  "Enterprise Honor",
+  {
+    title: "CAC Machinery Directive",
+    image: "/certificates/cac-certificate.jpg",
+    href: "/certificates/cac-certificate.jpg",
+  },
+  {
+    title: "High-Tech Enterprise",
+    image: "/certificates/high-tech-certificate.jpg",
+    href: "/certificates/high-tech-certificate.jpg",
+  },
+  {
+    title: "SGS Gold Plus Supplier",
+    image: "/certificates/sgs-certificate.jpg",
+    href: "/certificates/sgs-certificate.jpg",
+  },
+  {
+    title: "Verified Supplier Assessment",
+    image: "/certificates/verified-supplier-certificate.jpg",
+    href: "/certificates/verified-supplier-certificate.jpg",
+  },
+  {
+    title: "ISO 9001 Certificate Page 1",
+    image: "/certificates/iso9001-1.png",
+    href: "/certificates/iso9001-1.png",
+  },
+  {
+    title: "ISO 9001 Certificate Page 2",
+    image: "/certificates/iso9001-2.png",
+    href: "/certificates/iso9001-2.png",
+  },
+  {
+    title: "Sokos Certificate",
+    image: "/certificates/sokos-certificate-1.png",
+    href: "/certificates/sokos-certificate-1.png",
+  },
+  {
+    title: "CAC Certificate",
+    image: "/certificates/cac-certificate-pdf-1.png",
+    href: "/certificates/cac-certificate-pdf-1.png",
+  },
+  {
+    title: "Sokos Certificate 3",
+    image: "/certificates/sokos-certificate-3-1.png",
+    href: "/certificates/sokos-certificate-3-1.png",
+  },
 ];
 
 export default function AboutPage() {
@@ -161,20 +200,25 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {certificateItems.map((certificate) => (
-                <article className="border border-[#e2e8f0] bg-white p-4 shadow-sm" key={certificate}>
-                  <div className="flex aspect-[4/3] items-center justify-center bg-[#d9d9d9]">
-                    <div className="text-center">
-                      <div className="mx-auto mb-4 flex size-14 items-center justify-center rounded-full bg-white/70 text-[#9ca3af]">
-                        <span className="font-mono text-sm font-semibold">IMG</span>
-                      </div>
-                      <p className="font-mono text-xs uppercase tracking-[0.18em] text-[#9ca3af]">
-                        Certificate Image
-                      </p>
-                    </div>
-                  </div>
-                  <h3 className="mt-5 text-lg font-semibold">{certificate}</h3>
+                <article
+                  className="border border-[#e2e8f0] bg-white p-4 shadow-sm"
+                  key={certificate.title}
+                >
+                  <a
+                    className="block bg-[#f8fafc]"
+                    href={certificate.href}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <img
+                      alt={certificate.title}
+                      className="aspect-[4/3] w-full object-contain p-2"
+                      src={certificate.image}
+                    />
+                  </a>
+                  <h3 className="mt-5 text-lg font-semibold">{certificate.title}</h3>
                 </article>
               ))}
             </div>

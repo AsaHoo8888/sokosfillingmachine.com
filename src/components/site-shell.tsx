@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { Globe2, Mail, Phone, Search, Send, Share2 } from "lucide-react";
 
-const logoUrl =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuChilWMaADK030JNS-6_kKXY8jlaYgFOypPrMGnU_TDYc2c8jFamNyH2IfWHtcfr3GkpQDzgINzTvp9Fkw6KDYE_OD-Vsqr2_tHr8Cvx3aGyGbviv1SwUKue60mMP1L4osInJvzeOP_sw9FsAmcg4LrZ-TE75N65gbq7HiR106aPCXLvndheQsDVZY1XBnro2ZiExp_6BzsJdbJAYcKUSCOs84SX4zAn2au5v_cWo9fQC9l-IvzzVGwqWGm1VFYHJM3rXHQh3unF6w";
+const logoUrl = "/images/sokos-logo.png";
 
 const navItems = [
   { label: "HOME", href: "/" },

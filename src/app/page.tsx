@@ -12,12 +12,13 @@ import {
   type LucideIcon,
   ArrowDown,
   ArrowUp,
+  Play,
 } from "lucide-react";
 import { SiteFooter, SiteHeader } from "@/components/site-shell";
 
-const heroImage = "/images/home-hero-filling-line.jpg";
+const heroVideoUrl =
+  "https://www.youtube.com/embed/AQSqc1kFTRw?autoplay=1&mute=1&loop=1&playlist=AQSqc1kFTRw&controls=0&playsinline=1&rel=0&modestbranding=1";
 
-const lineImage = "/images/water-line-2.jpg";
 const productImage = "/images/product-filling-machine.jpg";
 
 const products = [
@@ -52,36 +53,36 @@ const solutions = [
     title: "Water Filling Line (PET/Glass)",
     description:
       "Advanced solutions for 350ml-1500ml formats, reaching capacities up to 36,000 BPH.",
-    cta: "VIEW SPECIFICATIONS",
-    image: lineImage,
-  },
-  {
-    title: "Juice Filling Line",
-    description: "Precision hot filling systems designed for multiple bottle shapes and sizes.",
-    cta: "EXPLORE JUICE SOLUTIONS",
-    image: lineImage,
+    image: "/images/solutions/water-line.jpg",
+    videoUrl: "https://youtu.be/6o8UcZ2xSUA",
   },
   {
     title: "Carbonated Drink Line",
     description:
       "High-stability isobaric filling technology for sparkling water and soft drinks.",
-    cta: "VIEW CSD SYSTEMS",
-    image: lineImage,
+    image: "/images/solutions/csd-line.png",
+    videoUrl: "https://youtu.be/hgHOXGUHOOc",
   },
   {
-    title: "5-Gallon Barrel Filling Line",
-    description: "Industrial-grade automation for high-volume 18.9L water production.",
-    cta: "LARGE FORMAT SPECS",
-    image: lineImage,
+    title: "Juice & Carbonated Production Line",
+    description:
+      "Precision hot filling and carbonated beverage systems for multiple bottle shapes and sizes.",
+    image: "/images/solutions/juice-line.jpg",
+    videoUrl: "https://youtu.be/4FUFwxLdCL0",
+  },
+  {
+    title: "Oil Filling Line",
+    description: "Stable filling, capping, labeling, and packing automation for edible oil lines.",
+    image: "/images/solutions/oil-line.png",
+    videoUrl: "https://youtu.be/763Ah2alqYQ",
   },
 ];
 
 const workshopImages = [
-  "/images/workshop/workshop-01.jpg",
-  "/images/workshop/workshop-02.jpg",
-  "/images/workshop/workshop-03.jpg",
-  "/images/workshop/workshop-04.jpg",
-  "/images/workshop/workshop-05.jpg",
+  "/images/about-workshop/workshop-01.jpg",
+  "/images/about-workshop/workshop-02.jpg",
+  "/images/about-workshop/cnc-machining.jpg",
+  "/images/about-workshop/engineering-design.jpg",
 ];
 
 const mapImage =
@@ -148,9 +149,13 @@ export default function Home() {
 
         <section className="relative flex min-h-[760px] items-center overflow-hidden bg-white pt-24">
           <div className="absolute inset-0">
-            <div
-              className="size-full scale-105 bg-cover bg-center opacity-95"
-              style={{ backgroundImage: `url(${heroImage})` }}
+            <iframe
+              aria-hidden="true"
+              className="pointer-events-none absolute left-1/2 top-1/2 h-[56.25vw] min-h-full w-[177.78vh] min-w-full -translate-x-1/2 -translate-y-1/2 opacity-95"
+              src={heroVideoUrl}
+              title="Sokos filling machine production line video"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              tabIndex={-1}
             />
             <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/20 to-transparent" />
           </div>
@@ -208,7 +213,17 @@ export default function Home() {
                     {solution.title}
                   </h3>
                   <p className="mb-6 max-w-2xl text-white/85">{solution.description}</p>
-                  <PrimaryButton>{solution.cta}</PrimaryButton>
+                  <a
+                    className="inline-flex items-center justify-center gap-4 bg-primary px-8 py-4 font-mono text-xs font-medium uppercase tracking-[0.2em] text-primary-foreground shadow-lg shadow-primary/20 transition-colors hover:bg-primary/90"
+                    href={solution.videoUrl}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <span className="flex size-8 items-center justify-center rounded-full bg-white/20">
+                      <Play fill="currentColor" size={14} />
+                    </span>
+                    Watch Video
+                  </a>
                 </div>
               </article>
 
@@ -325,7 +340,7 @@ export default function Home() {
                 Learn More About Sokos
               </button>
             </div>
-            <div className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5">
+            <div className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {workshopImages.map((image, index) => (
                 <img
                   alt={`Sokos workshop ${index + 1}`}
