@@ -56,7 +56,7 @@ const categories = [
     "Automatic stacking systems for cartons, trays, and wrapped packs.",
     "PAL-AUTO",
     "STACK: AUTO",
-    "/images/products/packaging-system-wrapper.jpg",
+    "/images/products/palletizing-machine.jpg",
   ],
   [
     "CO2 Mixer",
@@ -70,7 +70,7 @@ const categories = [
     "Automatic empty bottle or can unloading for high-speed production lines.",
     "DEP-AUTO",
     "LINE: AUTO",
-    "/images/products/packaging-system-wrapper.jpg",
+    "/images/products/depalletizer.jpg",
   ],
 ];
 
