@@ -25,10 +25,10 @@ const solutions = [
   {
     code: "CSD-ULTRA",
     title: "Carbonated Drink Filling Line",
-    href: "/products/water-filling-monoblock",
+    href: "/solutions/carbonated-drink-filling-line",
     description:
       "Isobaric filling solutions for soft drinks, mixers, and sparkling waters with advanced CO2 control.",
-    image: "/images/water-line-2.jpg",
+    image: "/images/solutions/csd-line.png",
   },
   {
     code: "BFL-3000",
@@ -36,7 +36,7 @@ const solutions = [
     href: "/products/water-filling-monoblock",
     description:
       "Oxygen-free filling systems designed to maintain the carbonation and integrity of craft brews.",
-    image: "/images/water-line-2.jpg",
+    image: "/images/solutions/beer-line.jpg",
   },
   {
     code: "OIL-PRO",

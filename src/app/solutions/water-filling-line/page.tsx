@@ -19,14 +19,13 @@ const lineSteps = [
     phase: "PHASE 03",
     title: "3-in-1 Filling",
     text: "Rinsing, filling, and capping integrated into a single sterile unit.",
-    image: "/images/product-filling-machine.jpg",
+    image: "/images/products/water-filling-60-head.jpg",
   },
   {
     phase: "PHASE 04",
     title: "Labeling",
     text: "OPP hot melt or PVC shrink sleeve application with laser precision.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCC0Rv8DLgQAGtH4awbtNGvXit-zt8jwjUinPfYfiWfMD-ty1h-AKOY6KD8lz0h4plJPcnUmJRVD2i3D3oeUnDpnG8mK89b_Qw_q-e8xB22jbnlGfjW_eEuEkcbpuVoKO45pZAN3n7ZyTAHFJ_KJ9wkXIQbn-xoNBT1xkmN9UyyKIQFCt_FQd7J2j0vG1Aa_YBN414FkMv40PKWuaA1KExpLg9pi-KKtOzkkvRGpl0efUCBHZKdBPU7",
+    image: "/images/products/labeling-machine.jpg",
   },
   {
     phase: "PHASE 05",

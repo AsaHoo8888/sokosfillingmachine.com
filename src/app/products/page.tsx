@@ -9,10 +9,69 @@ const heroImage =
 const productImage = "/images/product-filling-machine.jpg";
 
 const categories = [
-  ["Water Treatment System", "Advanced filtration and purification modules.", "WTS-X800", "CAP: 2000L/H"],
-  ["Bottle Blow Molding", "Automated PET stretch-blow solutions.", "BBM-V4", "RPM: 12,000 BPH"],
-  ["Filling Machine", "Isobaric and gravity filling systems.", "FLL-AUTO", "ACC: ±1.5MM"],
-  ["Packaging Machine", "Shrink wrapping and carton packing.", "PKG-MAX", "PLC: SIEMENS"],
+  [
+    "Water Treatment",
+    "Advanced filtration, RO purification, and sterilization modules.",
+    "WTS-X800",
+    "CAP: 2,000L/H",
+    "/images/products/water-treatment-system.png",
+  ],
+  [
+    "Beverage Blending",
+    "Mixing and preparation systems for juice, tea, and functional drinks.",
+    "MIX-PRO",
+    "PLC: SIEMENS",
+    "/images/products/co2-mixer.jpg",
+  ],
+  [
+    "Blow Molding Machine",
+    "Automated PET stretch-blow solutions for stable bottle forming.",
+    "BBM-V4",
+    "MAX: 12,000 BPH",
+    "/images/products/blow-molding-machine.jpg",
+  ],
+  [
+    "Filling Machine",
+    "Gravity, hot-fill, and isobaric filling systems for multiple liquids.",
+    "FLL-AUTO",
+    "ACC: ±1.5MM",
+    "/images/products/water-filling-60-head.jpg",
+  ],
+  [
+    "Labeling Machine",
+    "OPP hot melt and shrink sleeve labeling for round or shaped bottles.",
+    "LBL-SERIES",
+    "SYNC: SERVO",
+    "/images/products/labeling-machine.jpg",
+  ],
+  [
+    "Packaging Machine",
+    "Shrink wrapping and carton packing for finished products.",
+    "PKG-MAX",
+    "PLC: SIEMENS",
+    "/images/products/packaging-system-wrapper.jpg",
+  ],
+  [
+    "Palletizing Machine",
+    "Automatic stacking systems for cartons, trays, and wrapped packs.",
+    "PAL-AUTO",
+    "STACK: AUTO",
+    "/images/products/packaging-system-wrapper.jpg",
+  ],
+  [
+    "CO2 Mixer",
+    "Horizontal carbonation mixing system for sparkling drinks and soda water.",
+    "CO2-MIX",
+    "STABLE: CO2",
+    "/images/products/co2-mixer.jpg",
+  ],
+  [
+    "Depalletizer",
+    "Automatic empty bottle or can unloading for high-speed production lines.",
+    "DEP-AUTO",
+    "LINE: AUTO",
+    "/images/products/packaging-system-wrapper.jpg",
+  ],
 ];
 
 export default function ProductsPage() {
@@ -53,7 +112,7 @@ export default function ProductsPage() {
             </div>
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {categories.map(([title, description, code, spec]) => (
+              {categories.map(([title, description, code, spec, image]) => (
                 <article
                   className="group flex flex-col border border-[#e2e8f0] bg-white shadow-sm transition-all hover:border-primary hover:shadow-lg"
                   key={title}
@@ -62,7 +121,7 @@ export default function ProductsPage() {
                     <img
                       alt={title}
                       className="size-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      src={productImage}
+                      src={image}
                     />
                     <div className="absolute left-4 top-4 bg-primary px-2 py-1 font-mono text-[10px] text-white">
                       {code}

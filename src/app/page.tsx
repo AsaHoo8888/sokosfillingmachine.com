@@ -19,7 +19,7 @@ import { SiteFooter, SiteHeader } from "@/components/site-shell";
 const heroVideoUrl =
   "https://www.youtube.com/embed/AQSqc1kFTRw?autoplay=1&mute=1&loop=1&playlist=AQSqc1kFTRw&controls=0&playsinline=1&rel=0&modestbranding=1";
 
-const productImage = "/images/product-filling-machine.jpg";
+const productImage = "/images/products/water-filling-60-head.jpg";
 
 const products = [
   {
@@ -73,8 +73,15 @@ const solutions = [
   {
     title: "Oil Filling Line",
     description: "Stable filling, capping, labeling, and packing automation for edible oil lines.",
-    image: "/images/solutions/oil-line.png",
+    image: "/images/solutions/oil-filling-line.jpg",
     videoUrl: "https://youtu.be/763Ah2alqYQ",
+  },
+  {
+    title: "Beer Filling Line",
+    description:
+      "Glass bottle beer filling and packaging systems designed for stable foam control and product integrity.",
+    image: "/images/solutions/beer-line.jpg",
+    videoUrl: "https://www.youtube.com/watch?v=y5Orw6k5ycE",
   },
 ];
 
@@ -213,17 +220,19 @@ export default function Home() {
                     {solution.title}
                   </h3>
                   <p className="mb-6 max-w-2xl text-white/85">{solution.description}</p>
-                  <a
-                    className="inline-flex items-center justify-center gap-4 bg-primary px-8 py-4 font-mono text-xs font-medium uppercase tracking-[0.2em] text-primary-foreground shadow-lg shadow-primary/20 transition-colors hover:bg-primary/90"
-                    href={solution.videoUrl}
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    <span className="flex size-8 items-center justify-center rounded-full bg-white/20">
-                      <Play fill="currentColor" size={14} />
-                    </span>
-                    Watch Video
-                  </a>
+                  {solution.videoUrl ? (
+                    <a
+                      className="inline-flex items-center justify-center gap-4 bg-primary px-8 py-4 font-mono text-xs font-medium uppercase tracking-[0.2em] text-primary-foreground shadow-lg shadow-primary/20 transition-colors hover:bg-primary/90"
+                      href={solution.videoUrl}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      <span className="flex size-8 items-center justify-center rounded-full bg-white/20">
+                        <Play fill="currentColor" size={14} />
+                      </span>
+                      Watch Video
+                    </a>
+                  ) : null}
                 </div>
               </article>
 
@@ -262,7 +271,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {products.map((product) => (
                 <article
                   className="group border border-[#e2e8f0] bg-white transition-all duration-500 hover:border-primary/30 hover:shadow-xl"
@@ -275,7 +284,7 @@ export default function Home() {
                       src={product.image}
                     />
                   </div>
-                  <div className="p-8">
+                  <div className="p-6">
                     <h3 className="mb-4 text-xl font-semibold uppercase tracking-tight">
                       {product.title}
                     </h3>
@@ -387,9 +396,9 @@ export default function Home() {
                 </p>
                 <div className="flex flex-col gap-4">
                   {[
-                    ["Nigeria Project", "12,000 BPH Water Production Line"],
-                    ["Saudi Arabia Project", "8,000 BPH Juice Hot-Filling Facility"],
-                    ["Vietnam Project", "6,000 BPH Carbonated Drink System"],
+                    ["Dubai Project", "12,000 BPH Water Production Line"],
+                    ["Ethiopia Project", "16,000 BPH Carbonated Drink Line"],
+                    ["Indonesia Project", "8,000 BPH Edible Oil Line"],
                   ].map(([location, project]) => (
                     <div
                       className="border border-[#e2e8f0] bg-[#f5f7fa] p-6 transition-all hover:bg-white hover:shadow-md"

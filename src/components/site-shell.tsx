@@ -135,7 +135,17 @@ export function SiteFooter() {
           {
             title: "Core Products",
             href: "/products",
-            links: ["Water Treatment", "Blow Molding", "Filling Machine", "Packaging Machine"],
+            links: [
+              "Water Treatment",
+              "Beverage Blending",
+              "Blow Molding Machine",
+              "Filling Machine",
+              "Labeling Machine",
+              "Packaging Machine",
+              "Palletizing Machine",
+              "CO2 Mixer",
+              "Depalletizer",
+            ],
           },
           {
             title: "Solutions",
