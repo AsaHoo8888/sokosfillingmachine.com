@@ -17,10 +17,10 @@ const solutions = [
   {
     code: "JFL-SERIES",
     title: "Juice Filling Line",
-    href: "/products/water-filling-monoblock",
+    href: "/solutions/juice-filling-line",
     description:
       "Hot-filling and aseptic packaging technologies to preserve nutrient density and flavor profile.",
-    image: "/images/water-line-2.jpg",
+    image: "/images/solutions/juice-line.jpg",
   },
   {
     code: "CSD-ULTRA",
@@ -41,18 +41,18 @@ const solutions = [
   {
     code: "OIL-PRO",
     title: "Edible Oil Filling Line",
-    href: "/products/water-filling-monoblock",
+    href: "/solutions/oil-filling-line",
     description:
       "Weighted filling and drip-free technology for viscous cooking oils and lubricants.",
-    image: "/images/water-line-2.jpg",
+    image: "/images/solutions/oil-filling-line.jpg",
   },
   {
-    code: "SAUCE-MAX",
-    title: "Sauce Filling Line",
-    href: "/products/water-filling-monoblock",
+    code: "VPF-LINE",
+    title: "Viscous Product Filling Line",
+    href: "/solutions/viscous-product-filling-line",
     description:
-      "High-precision piston fillers for varied viscosities, from thin vinegars to chunky dressings.",
-    image: "/images/water-line-2.jpg",
+      "Piston filling, labeling, carton packing, and palletizing for sauces, pastes, creams, and detergents.",
+    image: "/images/products/viscous-line-piston-filling.jpg",
   },
 ];
 

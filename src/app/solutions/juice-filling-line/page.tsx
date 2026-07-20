@@ -6,59 +6,71 @@ const lineSteps = [
   {
     phase: "PHASE 01",
     title: "RO Water Treatment System",
-    text: "First-level reverse osmosis filtration removes impurities and prepares clean process water for filling.",
-    image: "/images/products/water-line-ro-treatment.png",
+    text: "Reverse osmosis filtration prepares clean process water for juice blending and filling.",
+    image: "/images/products/juice-line-ro-treatment.png",
   },
   {
     phase: "PHASE 02",
     title: "Air Compressor System",
-    text: "Stable compressed air supply for blow molding, pneumatic controls, and continuous line operation.",
-    image: "/images/products/water-line-air-compressor.jpg",
+    text: "Stable compressed air supply supports bottle blowing, pneumatic controls, and continuous operation.",
+    image: "/images/products/juice-line-air-compressor.jpg",
   },
   {
     phase: "PHASE 03",
     title: "Bottle Blow Molding Machine",
     text: "High-speed PET preform heating and stretch blowing for consistent bottle shape and strength.",
-    image: "/images/products/water-line-blow-molding.jpg",
+    image: "/images/products/juice-line-blow-molding.jpg",
   },
   {
     phase: "PHASE 04",
-    title: "3-in-1 Filling Machine",
-    text: "Integrated rinsing, filling, and capping monoblock designed for hygienic bottled water production.",
-    image: "/images/products/water-line-filling-machine.jpg",
+    title: "Juice Blending System",
+    text: "Stainless steel preparation tanks and pipelines blend juice, syrup, water, and additives with controlled consistency.",
+    image: "/images/products/juice-line-blending-system.jpg",
   },
   {
     phase: "PHASE 05",
-    title: "Labeling Machine",
-    text: "Automatic self-adhesive or wrap-around labeling with precise bottle positioning and smooth application.",
-    image: "/images/products/water-line-labeling-machine.jpg",
+    title: "Mixing Machine",
+    text: "Precision beverage mixing keeps flavor, sugar content, and product texture stable before filling.",
+    image: "/images/products/juice-line-mixing-machine.jpg",
   },
   {
     phase: "PHASE 06",
-    title: "Shrink Wrapping Machine",
-    text: "Automatic film feeding, sealing, and heat shrinking for stable bottle pack formation.",
-    image: "/images/products/water-line-shrink-wrapping.jpg",
+    title: "Juice Filling Machine",
+    text: "Integrated rinsing, hot filling, and capping system designed for hygienic juice production.",
+    image: "/images/products/juice-line-filling-machine.jpg",
   },
   {
     phase: "PHASE 07",
+    title: "Labeling Machine",
+    text: "Automatic self-adhesive or wrap-around labeling with precise bottle positioning and smooth application.",
+    image: "/images/products/juice-line-labeling-machine.jpg",
+  },
+  {
+    phase: "PHASE 08",
+    title: "Shrink Wrapping Machine",
+    text: "Automatic film feeding, sealing, and heat shrinking for stable bottle pack formation.",
+    image: "/images/products/juice-line-packaging-machine.jpg",
+  },
+  {
+    phase: "PHASE 09",
     title: "Palletizing System",
     text: "Automatic case conveying, stacking, and pallet handling for efficient end-of-line logistics.",
-    image: "/images/products/water-line-palletizing-system.png",
+    image: "/images/products/juice-line-palletizing-system.png",
   },
 ];
 
 const specs = [
-  ["CGF14-12-5", "2,000 - 3,000", "14-12-5", "3.5 kW", "0.4 m3/min"],
-  ["CGF24-24-8", "8,000 - 10,000", "24-24-8", "4.8 kW", "0.6 m3/min"],
-  ["CGF32-32-10", "12,000 - 15,000", "32-32-10", "7.5 kW", "0.8 m3/min"],
-  ["CGF50-50-15", "20,000 - 24,000", "50-50-15", "11.0 kW", "1.2 m3/min"],
+  ["RCGF14-12-5", "2,000 - 3,000", "14-12-5", "4.0 kW", "0.5 m3/min"],
+  ["RCGF24-24-8", "8,000 - 10,000", "24-24-8", "5.5 kW", "0.7 m3/min"],
+  ["RCGF32-32-10", "12,000 - 15,000", "32-32-10", "8.0 kW", "0.9 m3/min"],
+  ["RCGF50-50-15", "20,000 - 24,000", "50-50-15", "12.0 kW", "1.3 m3/min"],
 ];
 
 const projects = [
   {
     place: "NIGERIA, LAGOS",
     title: "18,000 BPH Turnkey Line",
-    text: "Full integration from source water treatment to automatic palletizing for a leading regional beverage group.",
+    text: "Full integration from RO water treatment and juice blending to hot filling, labeling, and automatic palletizing.",
     year: "Est. 2022",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuAP4P6D4E2dV2F7dNvNymMgO9yZdWDrAex2pCmQu7uEGu9dHcLJqp1vZ_nrBulkGhw9boMYU7eUEKIFnKYnrc6-WyluhJYCuy1LUcc0YdnTlHZ-xFAvOwk8n7aoH8Gqtx6dR_jyhTBo9TWDWEzbMnvLIGCKwssNhW5Dz8Yr3YqLwN3lraXHZa19c554GwwiOx7kEZCqQy-wLrLKPHbJDGNaAuDdB58OvBSiLD9Sc5bb359q3Qzdw2Og",
@@ -73,15 +85,15 @@ const projects = [
   },
   {
     place: "KENYA, NAIROBI",
-    title: "Multi-Format Water Line",
-    text: "Versatile configuration handling 330ml, 500ml, and 1.5L bottles with rapid changeover technology.",
+    title: "Multi-Format Juice Line",
+    text: "Versatile configuration handling 330ml, 500ml, and 1.5L juice bottles with rapid changeover technology.",
     year: "Est. 2021",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuBsmqer5ZMN104UAIQms18Eqhzt6lx2SYm4qC7qZALtn3aOFPC7ElnB_rUfMTDMRjrwfKDNj-XYJR0cDIl4OCnKSNQNp2eAS172oN590SMZ73J6-Sd0mzc9eiLnQXJNdoJVudc-_KwAhAkxfnZjTgFemD9OqI7cM68KuChmJ92uBPJwbSmKG6FBOaOVlwt_PAbOtO8sZ934y0NlG8HDEN1Pmefsghjk0J0eSn-xO2ZmV0ODeE4_qlh0",
   },
 ];
 
-export default function WaterFillingLinePage() {
+export default function JuiceFillingLinePage() {
   return (
     <main className="bg-[#f5f7fa] text-[#131314]">
       <div className="mx-auto min-h-screen max-w-[2000px] bg-white shadow-sm">
@@ -90,7 +102,7 @@ export default function WaterFillingLinePage() {
         <section className="relative overflow-hidden px-5 pb-24 pt-40 md:px-16 lg:pb-[120px]">
           <div
             className="absolute inset-0 bg-cover bg-center opacity-95"
-            style={{ backgroundImage: "url('/images/water-filling-line-hero.jpg')" }}
+            style={{ backgroundImage: "url('/images/solutions/juice-line.jpg')" }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/55 to-white/15" />
           <div className="relative mx-auto max-w-[1200px]">
@@ -101,14 +113,14 @@ export default function WaterFillingLinePage() {
                 </span>
               </div>
               <h1 className="mb-8 text-5xl font-bold leading-tight md:text-7xl">
-                Complete Water
+                Complete Juice
                 <br />
                 <span className="text-primary">Filling Solutions</span>
               </h1>
               <p className="mb-10 max-w-xl text-lg leading-8 text-slate-600">
-                Engineered for uncompromising hygiene and peak operational efficiency. From
-                2,000 to 24,000 BPH, our turnkey production lines integrate advanced automation
-                with industrial-grade durability.
+                Engineered for stable flavor, hygienic hot filling, and peak operational
+                efficiency. From water treatment to blending, filling, labeling, packing, and
+                palletizing, each module is configured for dependable juice production.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">
                 <Link
@@ -136,9 +148,9 @@ export default function WaterFillingLinePage() {
                 <div className="h-1 w-20 bg-primary" />
               </div>
               <p className="max-w-2xl text-base leading-7 text-slate-600">
-                A complete water filling line connects water treatment, bottle forming, filling,
-                labeling, and final packaging into one continuous production system. Each module
-                is configured around capacity, bottle type, factory layout, and hygiene standards.
+                A complete juice filling line connects water treatment, compressed air, bottle
+                forming, juice preparation, mixing, filling, labeling, packaging, and palletizing
+                into one continuous production system.
               </p>
             </div>
             <div className="mx-auto flex max-w-5xl flex-col gap-6">
@@ -260,8 +272,8 @@ export default function WaterFillingLinePage() {
               <div className="flex-1">
                 <h3 className="mb-4 text-2xl font-bold">Modular Expansion</h3>
                 <p className="leading-7 text-slate-600">
-                  Our lines are built on a modular chassis, allowing for future upgrades from
-                  still water to carbonated or pulp-filling with minimal downtime.
+                  Our lines are built on a modular chassis, allowing future upgrades for hot-fill
+                  juice, tea drinks, and pulp-containing beverages with minimal downtime.
                 </p>
               </div>
               <div className="hidden size-48 items-center justify-center rounded-full border border-[#e2e8f0] p-4 md:flex">
@@ -276,8 +288,8 @@ export default function WaterFillingLinePage() {
             <div className="mb-12">
               <h2 className="mb-4 text-3xl font-bold">Engineering in Motion</h2>
               <p className="max-w-2xl text-lg leading-8 text-slate-600">
-                Watch our complete water filling and packaging lines in action, demonstrating
-                precision engineering and high-speed efficiency.
+                Watch our complete juice filling and packaging lines in action, demonstrating
+                blending stability, hygienic filling, and high-speed efficiency.
               </p>
             </div>
             <div className="group relative aspect-video w-full overflow-hidden border border-[#e2e8f0]">

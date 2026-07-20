@@ -5,83 +5,65 @@ import { SiteFooter, SiteHeader } from "@/components/site-shell";
 const lineSteps = [
   {
     phase: "PHASE 01",
-    title: "RO Water Treatment System",
-    text: "First-level reverse osmosis filtration removes impurities and prepares clean process water for filling.",
-    image: "/images/products/water-line-ro-treatment.png",
+    title: "Piston Filling Machine",
+    text: "Servo piston filling delivers accurate portions for sauces, pastes, detergents, and other high-viscosity products.",
+    image: "/images/products/viscous-line-piston-filling.jpg",
   },
   {
     phase: "PHASE 02",
-    title: "Air Compressor System",
-    text: "Stable compressed air supply for blow molding, pneumatic controls, and continuous line operation.",
-    image: "/images/products/water-line-air-compressor.jpg",
+    title: "Labeling Machine",
+    text: "Automatic label application keeps bottle or jar presentation consistent across round, square, and shaped containers.",
+    image: "/images/products/viscous-line-labeling-machine.jpg",
   },
   {
     phase: "PHASE 03",
-    title: "Bottle Blow Molding Machine",
-    text: "High-speed PET preform heating and stretch blowing for consistent bottle shape and strength.",
-    image: "/images/products/water-line-blow-molding.jpg",
+    title: "Carton Packing Machine",
+    text: "Automatic carton forming, product loading, and sealing prepares finished viscous products for stable shipment.",
+    image: "/images/products/viscous-line-carton-packing.jpg",
   },
   {
     phase: "PHASE 04",
-    title: "3-in-1 Filling Machine",
-    text: "Integrated rinsing, filling, and capping monoblock designed for hygienic bottled water production.",
-    image: "/images/products/water-line-filling-machine.jpg",
-  },
-  {
-    phase: "PHASE 05",
-    title: "Labeling Machine",
-    text: "Automatic self-adhesive or wrap-around labeling with precise bottle positioning and smooth application.",
-    image: "/images/products/water-line-labeling-machine.jpg",
-  },
-  {
-    phase: "PHASE 06",
-    title: "Shrink Wrapping Machine",
-    text: "Automatic film feeding, sealing, and heat shrinking for stable bottle pack formation.",
-    image: "/images/products/water-line-shrink-wrapping.jpg",
-  },
-  {
-    phase: "PHASE 07",
     title: "Palletizing System",
-    text: "Automatic case conveying, stacking, and pallet handling for efficient end-of-line logistics.",
-    image: "/images/products/water-line-palletizing-system.png",
+    text: "Automatic carton conveying, stacking, and pallet handling improves end-of-line efficiency and warehouse flow.",
+    image: "/images/products/viscous-line-palletizing-system.png",
   },
 ];
 
 const specs = [
-  ["CGF14-12-5", "2,000 - 3,000", "14-12-5", "3.5 kW", "0.4 m3/min"],
-  ["CGF24-24-8", "8,000 - 10,000", "24-24-8", "4.8 kW", "0.6 m3/min"],
-  ["CGF32-32-10", "12,000 - 15,000", "32-32-10", "7.5 kW", "0.8 m3/min"],
-  ["CGF50-50-15", "20,000 - 24,000", "50-50-15", "11.0 kW", "1.2 m3/min"],
+  ["ZGF4", "500 - 1,000", "4 piston heads", "3.0 kW", "0.4 m3/min"],
+  ["ZGF8", "1,000 - 2,000", "8 piston heads", "4.5 kW", "0.6 m3/min"],
+  ["ZGF12", "2,000 - 3,000", "12 piston heads", "6.5 kW", "0.8 m3/min"],
+  ["ZGF14", "3,000 - 4,000", "14 piston heads", "8.0 kW", "1.0 m3/min"],
 ];
 
 const projects = [
   {
-    place: "NIGERIA, LAGOS",
-    title: "18,000 BPH Turnkey Line",
-    text: "Full integration from source water treatment to automatic palletizing for a leading regional beverage group.",
+    place: "THAILAND, BANGKOK",
+    title: "Sauce Filling Line",
+    text: "Integrated piston filling, labeling, carton packing, and palletizing for high-viscosity sauce production.",
     year: "Est. 2022",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuAP4P6D4E2dV2F7dNvNymMgO9yZdWDrAex2pCmQu7uEGu9dHcLJqp1vZ_nrBulkGhw9boMYU7eUEKIFnKYnrc6-WyluhJYCuy1LUcc0YdnTlHZ-xFAvOwk8n7aoH8Gqtx6dR_jyhTBo9TWDWEzbMnvLIGCKwssNhW5Dz8Yr3YqLwN3lraXHZa19c554GwwiOx7kEZCqQy-wLrLKPHbJDGNaAuDdB58OvBSiLD9Sc5bb359q3Qzdw2Og",
   },
   {
     place: "VIETNAM, HCMC",
-    title: "Compact 6,000 BPH System",
-    text: "Designed for optimized footprint in an urban production center, featuring high-efficiency labeling modules.",
+    title: "Detergent Filling System",
+    text: "Designed for foaming-control filling and clean carton packing in a compact factory layout.",
     year: "Est. 2023",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuB0gEzsSt7W3IFqo_5TPGC470ACgNg21JOJuFGXVRJbdWhGNlokARzqjk8SAI-GD8EVot97FsMSXO_LTqCMwNymVC68i0UYSUJn4M1xrpYJ_MEZU15FAJmy3oCLXjsPi6IhpIyw3TpNo-9zJJUPSyt0b9DfYjxG3VYnj2eleBc3sTVMLJftBPw0rJgZNQnq0Y25UaW6YQuJYiJFM9KmOgwbd2sU3ppeHOuSJ86g7NviAejs84al3bXm",
   },
   {
-    place: "KENYA, NAIROBI",
-    title: "Multi-Format Water Line",
-    text: "Versatile configuration handling 330ml, 500ml, and 1.5L bottles with rapid changeover technology.",
+    place: "INDONESIA, SURABAYA",
+    title: "Multi-Format Viscous Line",
+    text: "Flexible configuration handling bottles and jars with anti-drip filling and rapid changeover.",
     year: "Est. 2021",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuBsmqer5ZMN104UAIQms18Eqhzt6lx2SYm4qC7qZALtn3aOFPC7ElnB_rUfMTDMRjrwfKDNj-XYJR0cDIl4OCnKSNQNp2eAS172oN590SMZ73J6-Sd0mzc9eiLnQXJNdoJVudc-_KwAhAkxfnZjTgFemD9OqI7cM68KuChmJ92uBPJwbSmKG6FBOaOVlwt_PAbOtO8sZ934y0NlG8HDEN1Pmefsghjk0J0eSn-xO2ZmV0ODeE4_qlh0",
   },
 ];
 
-export default function WaterFillingLinePage() {
+export default function ViscousProductFillingLinePage() {
   return (
     <main className="bg-[#f5f7fa] text-[#131314]">
       <div className="mx-auto min-h-screen max-w-[2000px] bg-white shadow-sm">
@@ -90,7 +72,7 @@ export default function WaterFillingLinePage() {
         <section className="relative overflow-hidden px-5 pb-24 pt-40 md:px-16 lg:pb-[120px]">
           <div
             className="absolute inset-0 bg-cover bg-center opacity-95"
-            style={{ backgroundImage: "url('/images/water-filling-line-hero.jpg')" }}
+            style={{ backgroundImage: "url('/images/products/viscous-line-piston-filling.jpg')" }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/55 to-white/15" />
           <div className="relative mx-auto max-w-[1200px]">
@@ -101,14 +83,14 @@ export default function WaterFillingLinePage() {
                 </span>
               </div>
               <h1 className="mb-8 text-5xl font-bold leading-tight md:text-7xl">
-                Complete Water
+                Complete Viscous Product
                 <br />
                 <span className="text-primary">Filling Solutions</span>
               </h1>
               <p className="mb-10 max-w-xl text-lg leading-8 text-slate-600">
-                Engineered for uncompromising hygiene and peak operational efficiency. From
-                2,000 to 24,000 BPH, our turnkey production lines integrate advanced automation
-                with industrial-grade durability.
+                Engineered for sauces, pastes, detergents, creams, and other high-viscosity
+                products. From piston filling to palletizing, each module is configured for clean,
+                accurate, and stable production.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">
                 <Link
@@ -136,9 +118,9 @@ export default function WaterFillingLinePage() {
                 <div className="h-1 w-20 bg-primary" />
               </div>
               <p className="max-w-2xl text-base leading-7 text-slate-600">
-                A complete water filling line connects water treatment, bottle forming, filling,
-                labeling, and final packaging into one continuous production system. Each module
-                is configured around capacity, bottle type, factory layout, and hygiene standards.
+                A complete viscous product filling line connects piston filling, labeling, carton
+                packing, and palletizing into one continuous production system. Each module is
+                configured around viscosity, container format, factory layout, and output target.
               </p>
             </div>
             <div className="mx-auto flex max-w-5xl flex-col gap-6">
@@ -184,7 +166,7 @@ export default function WaterFillingLinePage() {
               <table className="w-full border-collapse text-left">
                 <thead>
                   <tr className="border-b border-[#e2e8f0] bg-[#e2e8f0]">
-                    {["Model ID", "Capacity (BPH)", "Valves (R-F-C)", "Power (KW)", "Air Consumption"].map(
+                    {["Model ID", "Capacity (BPH)", "Filling Heads", "Power (KW)", "Air Consumption"].map(
                       (label) => (
                         <th className="p-6 font-mono text-xs uppercase text-primary" key={label}>
                           {label}
@@ -238,7 +220,7 @@ export default function WaterFillingLinePage() {
             </article>
             <article className="bg-primary p-10 text-white shadow-md">
               <ShieldCheck className="mb-8 text-white" size={58} />
-              <h3 className="mb-6 text-2xl font-bold text-white">Food-Grade Excellence</h3>
+              <h3 className="mb-6 text-2xl font-bold text-white">Clean Product Contact Design</h3>
               <p className="mb-6 leading-7 text-white/80">
                 All contact parts constructed from 316L stainless steel. Mirror-polished
                 surfaces eliminate bacterial traps.
@@ -251,8 +233,8 @@ export default function WaterFillingLinePage() {
               <Leaf className="mb-6 text-primary" size={48} />
               <h3 className="mb-4 text-2xl font-bold">Energy Efficient</h3>
               <p className="mb-6 leading-7 text-slate-600">
-                Optimized vacuum systems and servo-driven motors reduce power consumption by
-                22% compared to industry standards.
+                Servo-driven filling and conveying systems reduce energy use while keeping
+                high-viscosity product movement steady.
               </p>
               <div className="font-mono text-primary">-22% KWh/Unit</div>
             </article>
@@ -260,8 +242,8 @@ export default function WaterFillingLinePage() {
               <div className="flex-1">
                 <h3 className="mb-4 text-2xl font-bold">Modular Expansion</h3>
                 <p className="leading-7 text-slate-600">
-                  Our lines are built on a modular chassis, allowing for future upgrades from
-                  still water to carbonated or pulp-filling with minimal downtime.
+                  Our lines are built on a modular chassis, allowing future upgrades for different
+                  container sizes, cap formats, and carton packing layouts with minimal downtime.
                 </p>
               </div>
               <div className="hidden size-48 items-center justify-center rounded-full border border-[#e2e8f0] p-4 md:flex">
@@ -276,8 +258,8 @@ export default function WaterFillingLinePage() {
             <div className="mb-12">
               <h2 className="mb-4 text-3xl font-bold">Engineering in Motion</h2>
               <p className="max-w-2xl text-lg leading-8 text-slate-600">
-                Watch our complete water filling and packaging lines in action, demonstrating
-                precision engineering and high-speed efficiency.
+                Watch complete viscous product filling and packaging lines in action, demonstrating
+                accurate piston filling, clean labeling, carton packing, and palletizing efficiency.
               </p>
             </div>
             <div className="group relative aspect-video w-full overflow-hidden border border-[#e2e8f0]">
