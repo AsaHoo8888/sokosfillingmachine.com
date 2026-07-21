@@ -33,10 +33,10 @@ const solutions = [
   {
     code: "BFL-3000",
     title: "Beer Filling Line",
-    href: "/products/water-filling-monoblock",
+    href: "/solutions/beer-filling-line",
     description:
       "Oxygen-free filling systems designed to maintain the carbonation and integrity of craft brews.",
-    image: "/images/solutions/beer-line.jpg",
+    image: "/images/solutions/beer-filling-line-generated.png",
   },
   {
     code: "OIL-PRO",
@@ -52,7 +52,7 @@ const solutions = [
     href: "/solutions/viscous-product-filling-line",
     description:
       "Piston filling, labeling, carton packing, and palletizing for sauces, pastes, creams, and detergents.",
-    image: "/images/products/viscous-line-piston-filling.jpg",
+    image: "/images/solutions/viscous-product-filling-line-generated.png",
   },
 ];
 
