@@ -268,11 +268,17 @@ export default function BeerFillingLinePage() {
                 oxygen-controlled filling, clean labeling, carton packing, and palletizing efficiency.
               </p>
             </div>
-            <div className="group relative aspect-video w-full overflow-hidden border border-[#e2e8f0]">
+            <Link
+              aria-label="Watch beer filling line video"
+              className="group relative block aspect-video w-full overflow-hidden border border-[#e2e8f0]"
+              href="https://www.youtube.com/watch?v=y5Orw6k5ycE"
+              rel="noreferrer"
+              target="_blank"
+            >
               <img
                 alt="Production line video thumbnail"
                 className="size-full object-cover transition-transform duration-700 group-hover:scale-105"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT1zJ32yEY9H3zQINbkItmKoCDNlGzvrSqofD4JcUefJzVTcxjXm1lIy4RWF-JETawlndh0IXT-ad7IUBXdVU-vGvsdYt5UEE4eDFTx-faeuk7bnuDlwfLW3LHNyvdwqSPibZWCLDPSTKVofiGGb87ej1ikJsgZIjZ3-snuSO1WiNXNwcp18c2FlzFzSL4ujAXMJvQJIIXbVYbP7KguH9IDaBly75c3F_Z9DbRDF5TySVvsGFEFyOG"
+                src="/images/solutions/beer-line.jpg"
               />
               <div className="absolute inset-0 flex items-center justify-center bg-black/20 transition-colors group-hover:bg-black/30">
                 <div className="flex size-20 items-center justify-center rounded-full bg-primary text-white shadow-xl transition-transform group-hover:scale-110">
@@ -284,7 +290,7 @@ export default function BeerFillingLinePage() {
                   4K Production Showcase
                 </span>
               </div>
-            </div>
+            </Link>
           </div>
         </section>
 
